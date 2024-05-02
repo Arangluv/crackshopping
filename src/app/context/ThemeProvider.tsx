@@ -1,7 +1,7 @@
 "use client";
 
+import { ThemeProvider as Provider } from "next-themes";
 import { darkTheme, lightTheme } from "../styles/theme.css";
-import { ThemeProvider as Provider, useTheme } from "next-themes";
 
 export default function ThemeProvider({
   children,
