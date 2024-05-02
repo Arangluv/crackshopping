@@ -23,34 +23,31 @@ export const global = createGlobalTheme(":root", {
 
 export const themeColor = createThemeContract({
   color: {
-    mainBackground: null,
-    subBackground: null,
-    mainFontColor: null,
-    subFontColor: null,
-    accentColor: null,
-    errorColor: null,
+    background: null,
+    text: null,
+    primary: null,
+    secondary: null,
+    accent: null,
+  },
+});
+// ref: https://www.realtimecolors.com/?colors=e8e9f2-05060a-505aaa-2a3165-384394&fonts=Inter-Inter
+export const lightTheme = createTheme(themeColor, {
+  color: {
+    background: "#f5f6fa",
+    text: "#0d0e17",
+    primary: "#5560af",
+    secondary: "#9aa1d5",
+    accent: "#6b76c7",
   },
 });
 
 export const darkTheme = createTheme(themeColor, {
   color: {
-    mainBackground: "",
-    subBackground: "",
-    mainFontColor: "",
-    subFontColor: "",
-    accentColor: "",
-    errorColor: "",
-  },
-});
-
-export const lightTheme = createTheme(themeColor, {
-  color: {
-    mainBackground: "",
-    subBackground: "",
-    mainFontColor: "",
-    subFontColor: "",
-    accentColor: "",
-    errorColor: "",
+    background: "#e8e9f2",
+    text: "#05060a",
+    primary: "#505aaa",
+    secondary: "#2a3165",
+    accent: "#384394",
   },
 });
 
