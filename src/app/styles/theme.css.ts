@@ -32,7 +32,7 @@ export const themeColor = createThemeContract({
   },
 });
 
-const darkTheme = createTheme(themeColor, {
+export const darkTheme = createTheme(themeColor, {
   color: {
     mainBackground: "",
     subBackground: "",
