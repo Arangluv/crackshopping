@@ -17,9 +17,14 @@ export const grid_item = style({
 });
 
 export const logo_wrapper = style({
+  position: "relative",
   gridColumn: "1 / 2",
   gridRow: "1 / 3",
+  display: "flex",
+});
+
+export const temp = style({
+  objectFit: "contain",
   width: "100%",
   height: "100%",
-  backgroundColor: vars.themeColor.color.accent,
 });

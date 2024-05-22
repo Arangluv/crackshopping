@@ -26,11 +26,11 @@ export const global = createGlobalTheme(":root", {
 
 const themeColor = createThemeContract({
   color: {
-    background: "#f5f6fa",
-    text: "#0d0e17",
-    primary: "#5560af",
-    secondary: "#9aa1d5",
-    accent: "#6b76c7",
+    background: null,
+    text: null,
+    primary: null,
+    secondary: null,
+    accent: null,
   },
 });
 
