@@ -1,9 +1,12 @@
+/* eslint-disable */
+
 import {
+  createThemeContract,
   createGlobalTheme,
   createTheme,
-  createThemeContract,
 } from "@vanilla-extract/css";
 
+// dark mode와 light mode 관계없이 적용되는 스타일들
 export const global = createGlobalTheme(":root", {
   fontSize: {
     XLarge: "48px",
@@ -17,21 +20,11 @@ export const global = createGlobalTheme(":root", {
   fontWeight: {
     normal: "400",
     medium: "500",
-    large: "600",
+    large: "700",
   },
 });
 
-export const themeColor = createThemeContract({
-  color: {
-    background: null,
-    text: null,
-    primary: null,
-    secondary: null,
-    accent: null,
-  },
-});
-// ref: https://www.realtimecolors.com/?colors=e8e9f2-05060a-505aaa-2a3165-384394&fonts=Inter-Inter
-export const lightTheme = createTheme(themeColor, {
+const themeColor = createThemeContract({
   color: {
     background: "#f5f6fa",
     text: "#0d0e17",
@@ -41,14 +34,14 @@ export const lightTheme = createTheme(themeColor, {
   },
 });
 
-export const darkTheme = createTheme(themeColor, {
+export const light = createTheme(themeColor, {
   color: {
-    background: "#e8e9f2",
-    text: "#05060a",
-    primary: "#505aaa",
-    secondary: "#2a3165",
-    accent: "#384394",
+    background: "#ffffff",
+    text: "#040316",
+    primary: "#2F27CE",
+    secondary: "#DDDBFF",
+    accent: "#443DFF",
   },
 });
 
-export const vars = { ...global, ...themeColor };
+export const vars = { ...global, themeColor };
