@@ -163,6 +163,6 @@ export const nav_list_wrapper = style({
   justifyContent: "center",
   width: 80,
   height: 80,
-  margin: "0px 18px",
+  margin: "0px 5px",
   backgroundColor: "red",
 });
