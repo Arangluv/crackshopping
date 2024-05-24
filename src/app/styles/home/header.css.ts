@@ -9,19 +9,15 @@ export const header_container = style({
   height: "100%",
   gridColumn: "1 / 4",
   gridRow: "1 / 2",
-  border: "1px solid red",
   gridTemplateColumns: "1fr 3fr 1fr",
   gridTemplateRows: "1fr 1fr",
 });
 
-export const grid_item = style({
-  border: "1px solid blue",
-});
+export const grid_item = style({});
 
 // logo image part
 
 export const logo_wrapper = style({
-  position: "relative",
   gridColumn: "1 / 2",
   gridRow: "1 / 3",
   display: "flex",
@@ -44,13 +40,22 @@ export const search_bar_container = style({
   gridRow: "1 / 3",
   border: "1px solid purple",
 });
-
+export const content_wrapper = style({
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  width: "70%",
+});
 export const search_bar_form = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "70%",
+  width: "100%",
   height: "25%",
+});
+export const search_field = style({
+  width: "100%",
+  height: "100%",
 });
 export const search_label = style({
   display: "flex",
@@ -59,9 +64,10 @@ export const search_label = style({
   height: "100%",
   boxSizing: "border-box",
 });
+
 export const search_input = style({
-  width: "70%",
-  height: "100%",
+  width: "80%",
+  height: "36px",
   padding: "0 10px",
   fontSize: vars.fontSize.small,
   borderTopLeftRadius: "10px",
@@ -78,9 +84,9 @@ export const search_input = style({
 export const icon_wrapper = style({
   display: "flex",
   padding: "1px 0",
-  width: "30%",
+  width: "20%",
   boxSizing: "border-box",
-  height: "100%",
+  height: "auto",
   justifyContent: "center",
   alignItems: "center",
   borderTopRightRadius: "10px",
@@ -90,9 +96,73 @@ export const icon_wrapper = style({
   borderColor: vars.themeColor.color.primary,
   backgroundColor: vars.themeColor.color.primary,
 });
+
+export const icon = style({
+  width: 25,
+  height: 25,
+  strokeWidth: 1,
+  color: vars.themeColor.color.background,
+});
 export const search_result_wrapper = style({
   position: "absolute",
-  bottom: "-20px",
-  left: "50%",
-  transform: "translateX(-50%)",
+  boxSizing: "border-box",
+  padding: "8px 0px",
+  width: "80%",
+  minHeight: "100px",
+  marginTop: "20px",
+  transform: "translateY(18px)",
+  border: "1px solid rgba(0,0,0,0.2)",
+  backgroundColor: vars.themeColor.color.background,
+  boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+  zIndex: 999,
+  display: "none",
+  selectors: {
+    "form:focus-within + &": {
+      display: "block",
+    },
+  },
+});
+
+export const result_text_wrapper = style({
+  width: "100%",
+  padding: "5px 10px",
+  ":hover": {
+    backgroundColor: vars.themeColor.color.secondary,
+  },
+  selectors: {
+    "&:not(.last-result)": {
+      marginBottom: "5px",
+    },
+  },
+});
+export const result_link = style({
+  display: "block",
+});
+export const text_accent = style({
+  color: vars.themeColor.color.accent,
+  fontWeight: vars.fontWeight.large,
+});
+export const hidden = style({
+  display: "none",
+});
+
+// product navigation part
+
+export const product_nav = style({
+  gridColumn: "3 / 4",
+  gridRow: "1 / 3",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+export const nav_list_wrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  width: 80,
+  height: 80,
+  margin: "0px 18px",
+  backgroundColor: "red",
 });

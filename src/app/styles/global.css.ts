@@ -21,6 +21,7 @@ time, mark, audio, video`,
     fontSize: "100%",
     font: "inherits",
     verticalAlign: "baseline",
+    boxSizing: "border-box",
   },
 );
 globalStyle("body", {
@@ -29,7 +30,10 @@ globalStyle("body", {
   width: "100vw",
   backgroundColor: "white",
 });
-
+globalStyle("a", {
+  textDecoration: "none",
+  color: "black",
+});
 globalStyle("ol, ul", {
   listStyle: "none",
 });
