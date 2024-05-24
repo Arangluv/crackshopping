@@ -14,6 +14,4 @@ export const main_wrapper = style({
   boxSizing: "border-box",
 });
 
-export const grid_item = style({
-  border: "1px solid red",
-});
+export const grid_item = style({});

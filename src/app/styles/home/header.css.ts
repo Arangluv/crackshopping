@@ -9,7 +9,7 @@ export const header_container = style({
   height: "100%",
   gridColumn: "1 / 4",
   gridRow: "1 / 2",
-  gridTemplateColumns: "1fr 3fr 1fr",
+  gridTemplateColumns: "2fr 4fr 2fr",
   gridTemplateRows: "1fr 1fr",
 });
 
@@ -38,13 +38,12 @@ export const search_bar_container = style({
   alignItems: "center",
   gridColumn: "2 / 3",
   gridRow: "1 / 3",
-  border: "1px solid purple",
 });
 export const content_wrapper = style({
   position: "relative",
   display: "flex",
   flexDirection: "column",
-  width: "70%",
+  width: "80%",
 });
 export const search_bar_form = style({
   display: "flex",
@@ -161,8 +160,19 @@ export const nav_list_wrapper = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  width: 80,
-  height: 80,
-  margin: "0px 5px",
-  backgroundColor: "red",
+  width: "auto",
+  height: 100,
+  margin: "0px 10px",
+});
+
+export const nav_icon = style({
+  width: 40,
+  height: 40,
+  color: "rgba(0,0,0,0.6)",
+});
+
+export const nav_text = style({
+  fontWeight: vars.fontWeight.large,
+  marginTop: 10,
+  color: "rgba(0,0,0,0.7)",
 });

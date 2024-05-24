@@ -4,6 +4,7 @@ import * as style from "../../../styles/home/header.css";
 import logo from "../../../../../public/assets/logo/logo.png";
 import Discount from "../../../../../public/assets/icons/discount.svg";
 import Product from "../../../../../public/assets/icons/product.svg";
+import Category from "../../../../../public/assets/icons/category.svg";
 function Header() {
   return (
     <header className={style.header_container}>
@@ -20,18 +21,21 @@ function Header() {
       <div className={style.product_nav}>
         <a href="#">
           <div className={style.nav_list_wrapper}>
-            <Product />
-            <span>Today's Products</span>
+            <Category class={style.nav_icon} />
+            <span className={style.nav_text}>Top Categories</span>
           </div>
         </a>
         <a href="#">
           <div className={style.nav_list_wrapper}>
-            <Discount />
-            <span>Top Deals</span>
+            <Product class={style.nav_icon} />
+            <span className={style.nav_text}>Today's Products</span>
           </div>
         </a>
         <a href="#">
-          <div className={style.nav_list_wrapper}></div>
+          <div className={style.nav_list_wrapper}>
+            <Discount class={style.nav_icon} />
+            <span className={style.nav_text}>Top Deals</span>
+          </div>
         </a>
       </div>
     </header>
