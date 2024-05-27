@@ -11,6 +11,13 @@ export const header_container = style({
   gridRow: "1 / 2",
   gridTemplateColumns: "2fr 4fr 2fr",
   gridTemplateRows: "1fr 1fr",
+  "@media": {
+    "screen and (max-width:479px)": {
+      position: "relative",
+      gridTemplateColumns: "3fr 4fr 3fr",
+      height: "15vh",
+    },
+  },
 });
 
 export const grid_item = style({});
@@ -21,6 +28,12 @@ export const logo_wrapper = style({
   gridColumn: "1 / 2",
   gridRow: "1 / 3",
   display: "flex",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridColumn: "1 / 2",
+      gridRow: "1 / 2",
+    },
+  },
 });
 
 export const logo_image = style({
@@ -38,6 +51,12 @@ export const search_bar_container = style({
   alignItems: "center",
   gridColumn: "2 / 3",
   gridRow: "1 / 3",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridColumn: "1 / 4",
+      gridRow: "2 / 3",
+    },
+  },
 });
 export const content_wrapper = style({
   position: "relative",
@@ -78,6 +97,14 @@ export const search_input = style({
   ":focus": {
     outline: "none",
   },
+  "@media": {
+    "screen and (max-width:479px)": {
+      //   -webkit-appearance: none;  -webkit-border-radius: 0;
+      WebkitAppearance: "none",
+      WebkitBorderTopRightRadius: 0,
+      WebkitBorderBottomRightRadius: 0,
+    },
+  },
 });
 
 export const icon_wrapper = style({
@@ -101,6 +128,13 @@ export const icon = style({
   height: 25,
   strokeWidth: 1,
   color: vars.themeColor.color.background,
+  "@media": {
+    "screen and (max-width:479px)": {
+      width: 20,
+      height: 20,
+      strokeWidth: 0.5,
+    },
+  },
 });
 export const search_result_wrapper = style({
   position: "absolute",
@@ -146,15 +180,62 @@ export const hidden = style({
 });
 
 // product navigation part
-
-export const product_nav = style({
-  gridColumn: "3 / 4",
-  gridRow: "1 / 3",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+export const menu_wrapper = style({
+  display: "none",
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-end",
+      gridColumn: "3 / 4",
+      gridRow: "1 / 2",
+    },
+  },
 });
 
+export const menu_icon = style({
+  color: vars.themeColor.color.text,
+  width: 30,
+  height: 30,
+});
+
+export const product_nav = style({
+  display: "flex",
+  gridColumn: "3 / 4",
+  gridRow: "1 / 3",
+  alignItems: "center",
+  justifyContent: "center",
+  "@media": {
+    "all and (min-width:1024px) and (max-width:1440px)": {},
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {
+      display: "none",
+      selectors: {
+        // menu icon의 hover가 되고 product nav가 열림
+        [`${menu_wrapper}:hover + &`]: {
+          display: "flex",
+        },
+      },
+      // 자기자신 hover시 위의 조건이 false가 되어 product nav가 닫히는 것을 방지
+      ":hover": {
+        display: "flex",
+      },
+      width: "100%",
+      position: "absolute",
+      top: "50%",
+      overflow: "hidden",
+      flexDirection: "column",
+      backgroundColor: vars.themeColor.color.background,
+      boxSizing: "border-box",
+      boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+    },
+  },
+});
+
+export const nav_link = style({
+  display: "flex",
+  width: "100%",
+});
 export const nav_list_wrapper = style({
   display: "flex",
   flexDirection: "column",
@@ -164,12 +245,27 @@ export const nav_list_wrapper = style({
   height: 100,
   margin: "0px 10px",
   boxSizing: "border-box",
+  "@media": {
+    "screen and (max-width:479px)": {
+      width: "100%",
+      margin: 0,
+      height: 50,
+      padding: 5,
+      borderBottom: "1px solid",
+      borderColor: vars.themeColor.color.border,
+    },
+  },
 });
 
 export const nav_icon = style({
   width: 40,
   height: 40,
   color: "rgba(0,0,0,0.6)",
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "none",
+    },
+  },
 });
 
 export const nav_text = style({
@@ -177,4 +273,14 @@ export const nav_text = style({
   fontWeight: vars.fontWeight.large,
   marginTop: 10,
   color: "rgba(0,0,0,0.7)",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.micro,
+      selectors: {
+        "a:hover > div  &": {
+          color: vars.themeColor.color.accent,
+        },
+      },
+    },
+  },
 });

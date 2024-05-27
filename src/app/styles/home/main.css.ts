@@ -19,7 +19,7 @@ export const main_container = style({
       backgroundColor: "purple",
     },
     "screen and (max-width:479px)": {
-      padding: 0,
+      padding: "0 10px",
       "::-webkit-scrollbar": {
         display: "none",
       },
