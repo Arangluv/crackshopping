@@ -21,19 +21,19 @@ function Header() {
       <div className={style.product_nav}>
         <a href="#">
           <div className={style.nav_list_wrapper}>
-            <Category class={style.nav_icon} />
+            <Category className={style.nav_icon} />
             <span className={style.nav_text}>Top Categories</span>
           </div>
         </a>
         <a href="#">
           <div className={style.nav_list_wrapper}>
-            <Product class={style.nav_icon} />
+            <Product className={style.nav_icon} />
             <span className={style.nav_text}>Today's Products</span>
           </div>
         </a>
         <a href="#">
           <div className={style.nav_list_wrapper}>
-            <Discount class={style.nav_icon} />
+            <Discount className={style.nav_icon} />
             <span className={style.nav_text}>Top Deals</span>
           </div>
         </a>

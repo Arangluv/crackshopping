@@ -163,6 +163,7 @@ export const nav_list_wrapper = style({
   width: "auto",
   height: 100,
   margin: "0px 10px",
+  boxSizing: "border-box",
 });
 
 export const nav_icon = style({
@@ -172,6 +173,7 @@ export const nav_icon = style({
 });
 
 export const nav_text = style({
+  whiteSpace: "nowrap",
   fontWeight: vars.fontWeight.large,
   marginTop: 10,
   color: "rgba(0,0,0,0.7)",

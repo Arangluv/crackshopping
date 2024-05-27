@@ -1,5 +1,4 @@
-import { globalStyle } from "@vanilla-extract/css";
-
+import { globalStyle, style } from "@vanilla-extract/css";
 globalStyle(
   `html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -30,6 +29,7 @@ globalStyle("body", {
   width: "100vw",
   backgroundColor: "white",
 });
+
 globalStyle("a", {
   textDecoration: "none",
   color: "black",
@@ -52,4 +52,15 @@ q:before, q:after`,
 globalStyle("table", {
   borderCollapse: "collapse",
   borderSpacing: 0,
+});
+
+export const hidden_scroll = style({
+  overflowX: "hidden",
+  "@media": {
+    "screen and (max-width:479px)": {
+      "::-webkit-scrollbar": {
+        display: "none",
+      },
+    },
+  },
 });
