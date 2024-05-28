@@ -1,6 +1,6 @@
 import Image from "next/image";
-import SearchBar from "./SearchBar";
 import { AiOutlineMenu } from "react-icons/ai";
+import SearchBar from "./SearchBar";
 import * as style from "../../../styles/home/header.css";
 import logo from "../../../../../public/assets/logo/logo.png";
 import Discount from "../../../../../public/assets/icons/discount.svg";
@@ -35,7 +35,7 @@ function Header() {
         <a href="#" className={style.nav_link}>
           <div className={style.nav_list_wrapper}>
             <Product className={style.nav_icon} />
-            <span className={style.nav_text}>Today's Products</span>
+            <span className={style.nav_text}>Today&apos; Products</span>
           </div>
         </a>
         <a href="#" className={style.nav_link}>

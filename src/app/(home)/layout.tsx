@@ -5,6 +5,7 @@ import Header from "./(components)/header/Header";
 import Footer from "./(components)/Footer";
 import * as globalStyle from "../styles/global.css";
 import * as style from "../styles/home/main.css";
+
 export const metadata: Metadata = {
   title: "Shop Smart | CrackShopping",
   description:
