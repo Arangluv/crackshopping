@@ -1,4 +1,6 @@
-import { globalStyle } from "@vanilla-extract/css";
+/* eslint-disable */
+
+import { globalStyle, style } from "@vanilla-extract/css";
 
 globalStyle(
   `html, body, div, span, applet, object, iframe,
@@ -21,14 +23,20 @@ time, mark, audio, video`,
     fontSize: "100%",
     font: "inherits",
     verticalAlign: "baseline",
+    boxSizing: "border-box",
   },
 );
 globalStyle("body", {
   lineHeight: 1,
   height: "auto",
   width: "100vw",
+  backgroundColor: "white",
 });
 
+globalStyle("a", {
+  textDecoration: "none",
+  color: "black",
+});
 globalStyle("ol, ul", {
   listStyle: "none",
 });
@@ -47,4 +55,15 @@ q:before, q:after`,
 globalStyle("table", {
   borderCollapse: "collapse",
   borderSpacing: 0,
+});
+
+export const hidden_scroll = style({
+  overflowX: "hidden",
+  "@media": {
+    "screen and (max-width:479px)": {
+      "::-webkit-scrollbar": {
+        display: "none",
+      },
+    },
+  },
 });

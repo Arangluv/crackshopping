@@ -1,19 +1,34 @@
 "use client";
-import { ThemeProvider as Provider } from "next-themes";
-import { darkTheme, lightTheme } from "../styles/theme.css";
 
-export default function ThemeProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// import { ThemeProvider } from "next-themes";
+// import { darkTheme, lightTheme } from "../styles/theme.css";
+
+// export default function Provider({ children }: { children: React.ReactNode }) {
+//   return (
+//     <ThemeProvider
+//       attribute="class"
+//       defaultTheme="light"
+//       value={{ light: lightTheme, dark: darkTheme }}
+//     >
+//       {children}
+//     </ThemeProvider>
+//   );
+// }
+
+import { ThemeProvider } from "next-themes";
+import { light } from "../styles/theme.css";
+
+export default function Provider({ children }: { children: React.ReactNode }) {
   return (
-    <Provider
+    <ThemeProvider
       attribute="class"
-      defaultTheme="light"
-      value={{ light: lightTheme, dark: darkTheme }}
+      defaultTheme="lightTheme"
+      enableSystem={false}
+      value={{
+        lightTheme: light,
+      }}
     >
       {children}
-    </Provider>
+    </ThemeProvider>
   );
 }
