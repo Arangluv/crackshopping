@@ -1,19 +1,23 @@
 import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import SearchBar from "./SearchBar";
-import * as style from "../../../styles/home/header.css";
-import logo from "../../../../../public/assets/logo/logo.png";
-import Discount from "../../../../../public/assets/icons/discount.svg";
-import Product from "../../../../../public/assets/icons/product.svg";
-import Category from "../../../../../public/assets/icons/category.svg";
+import * as style from "../../../../styles/home/header.css";
+import Discount from "@/public/assets/icons/discount.svg";
+import Product from "@/public/assets/icons/product.svg";
+import Category from "@/public/assets/icons/category.svg";
+import initTranslations from "../../../../utills/localization/translation";
 
-function Header() {
+interface IProps {
+  locale: string;
+}
+export default async function Header({ locale }: IProps) {
+  const { t } = await initTranslations(locale, "home");
   return (
     <header className={style.header_container}>
       <div className={style.logo_wrapper}>
         <a href="#">
           <Image
-            src={logo}
+            src={"/assets/logo/logo.png"}
             alt="logo image"
             width={270}
             height={100}
@@ -29,24 +33,22 @@ function Header() {
         <a href="#" className={style.nav_link}>
           <div className={style.nav_list_wrapper}>
             <Category className={style.nav_icon} />
-            <span className={style.nav_text}>Top Categories</span>
+            <span className={style.nav_text}>{t("top-category")}</span>
           </div>
         </a>
         <a href="#" className={style.nav_link}>
           <div className={style.nav_list_wrapper}>
             <Product className={style.nav_icon} />
-            <span className={style.nav_text}>Today&apos; Products</span>
+            <span className={style.nav_text}>{t("today-product")}</span>
           </div>
         </a>
         <a href="#" className={style.nav_link}>
           <div className={style.nav_list_wrapper}>
             <Discount className={style.nav_icon} />
-            <span className={style.nav_text}>Top Deals</span>
+            <span className={style.nav_text}>{t("top-deal")}</span>
           </div>
         </a>
       </div>
     </header>
   );
 }
-
-export default Header;

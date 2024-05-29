@@ -3,30 +3,33 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/public/*": ["./public/*"]
+      "@/*": ["./src/*"]
     }
   },
+
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/custom.d.ts"
+    ".next/types/**/*.ts",
+    "../middleware.ts",
+    "utills/localization/translation.ts",
+    "../custom.d.ts"
   ],
   "exclude": ["node_modules"]
 }

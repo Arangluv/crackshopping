@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import "../styles/global.css";
-import Provider from "../context/ThemeProvider";
+import "../../styles/global.css";
+import Provider from "../../context/ThemeProvider";
 import Header from "./(components)/header/Header";
 import Footer from "./(components)/Footer";
-import * as globalStyle from "../styles/global.css";
-import * as style from "../styles/home/main.css";
+import * as globalStyle from "../../styles/global.css";
+import * as style from "../../styles/home/main.css";
 
 export const metadata: Metadata = {
   title: "Shop Smart | CrackShopping",
@@ -14,15 +14,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={globalStyle.hidden_scroll}>
         <Provider>
           <main className={style.main_container}>
-            <Header />
+            <Header locale={locale} />
             {children}
             <Footer />
           </main>
