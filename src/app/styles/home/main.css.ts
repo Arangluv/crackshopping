@@ -29,5 +29,6 @@ export const main_container = style({
 export const main_content_wrapeer = style({
   gridRow: "2 / 3",
   gridColumn: "1 / 4",
+  border: "1px solid red",
 });
 export const grid_item = style({});

@@ -11,9 +11,6 @@ export default async function initTranslations(
   locale: string,
   namespace: string,
 ) {
-  console.log(`locale ${locale}`);
-  console.log(`namespace ${namespace}`);
-  console.log(`@/public/assets/locales/${locale}/${namespace}.json`);
   const i18nInstance = createInstance();
   let resources = null;
   i18nInstance
