@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import SearchBar from "./SearchBar";
-import * as style from "../../../../styles/home/header.css";
+import * as style from "@style/home/header.css";
 import Discount from "@/public/assets/icons/discount.svg";
 import Product from "@/public/assets/icons/product.svg";
 import Category from "@/public/assets/icons/category.svg";

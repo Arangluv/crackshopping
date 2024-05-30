@@ -1,5 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-import * as style from "../../../../styles/home/header.css";
+import * as style from "@style/home/header.css";
 
 export default function SearchBar() {
   return (

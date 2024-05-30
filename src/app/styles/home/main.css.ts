@@ -26,9 +26,14 @@ export const main_container = style({
     },
   },
 });
-export const main_content_wrapeer = style({
+export const main_content_container = style({
   gridRow: "2 / 3",
   gridColumn: "1 / 4",
+  display: "grid",
+  gridTemplateColumns: "1fr 4fr",
+  gridTemplateRows: "repeat(5, 1fr)",
   border: "1px solid red",
 });
-export const grid_item = style({});
+export const grid_item = style({
+  border: "1px solid blue",
+});
