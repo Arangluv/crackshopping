@@ -39,9 +39,9 @@ export const light = createTheme(themeColor, {
   color: {
     background: "#ffffff",
     text: "#040316",
-    primary: "#2F27CE",
+    accent: "#2F27CE",
     secondary: "#DDDBFF",
-    accent: "#443DFF",
+    primary: "#443DFF",
     border: "rgba(0,0,0,0.2)",
   },
 });
