@@ -1,5 +1,6 @@
 /* eslint-disable */
 
+import { vars } from "@style/theme.css";
 import { style } from "@vanilla-extract/css";
 
 export const main_container = style({
@@ -26,6 +27,9 @@ export const main_container = style({
     },
   },
 });
+
+// main content part
+
 export const main_content_container = style({
   gridRow: "2 / 3",
   gridColumn: "1 / 4",
@@ -33,7 +37,41 @@ export const main_content_container = style({
   gridTemplateColumns: "1fr 4fr",
   gridTemplateRows: "repeat(5, 1fr)",
   border: "1px solid red",
+  minHeight: "100vh",
 });
 export const grid_item = style({
   border: "1px solid blue",
+});
+
+// sidebar part
+
+export const sidebar_container = style({
+  gridColumn: "1 / 2",
+  gridRow: "1 / 3",
+});
+
+// main top part
+export const main_top_container = style({
+  gridColumn: "2 / 3",
+  gridRow: "1 / 3",
+  backgroundColor: vars.themeColor.color.secondary,
+});
+
+// today's product part
+export const today_product_container = style({
+  gridColumn: "1 / 3",
+  gridRow: "3 / 4",
+});
+
+// top deal
+export const top_deal_container = style({
+  gridColumn: "1 / 3",
+  gridRow: "4 / 5",
+});
+
+// adsense part
+
+export const adsense_container = style({
+  gridColumn: "1 / 3",
+  gridRow: "5 / 6",
 });

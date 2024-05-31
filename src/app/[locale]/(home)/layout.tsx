@@ -23,11 +23,11 @@ export default function RootLayout({
     <html lang={locale}>
       <body className={globalStyle.hidden_scroll}>
         <Provider>
-          <main className={style.main_container}>
+          <div className={style.main_container}>
             <Header locale={locale} />
             {children}
             <Footer />
-          </main>
+          </div>
         </Provider>
       </body>
     </html>
