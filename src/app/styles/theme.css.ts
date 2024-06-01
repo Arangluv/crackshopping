@@ -11,11 +11,11 @@ export const global = createGlobalTheme(":root", {
   fontSize: {
     XLarge: "48px",
     large: "36px",
-    medium: "28px",
-    regular: "22px",
-    middleSmall: "18px",
-    small: "16px",
-    micro: "14px",
+    medium: "22px",
+    regular: "18px",
+    middleSmall: "16px",
+    small: "14px",
+    micro: "12px",
   },
   fontWeight: {
     normal: "400",

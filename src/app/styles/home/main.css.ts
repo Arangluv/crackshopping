@@ -150,19 +150,93 @@ export const main_top_container = style({
   gridColumn: "2 / 3",
   gridRow: "1 / 3",
   backgroundColor: vars.themeColor.color.secondary,
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr 1fr",
+  gridTemplateRows: "1fr 1fr",
+  padding: 5,
+  gap: 5,
+});
+
+const common_wrapper = style({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "white",
+  borderRadius: 5,
+});
+
+export const site_banner_wrapper = style([
+  common_wrapper,
+  {
+    gridColumn: "1 / 3",
+    gridRow: "1 / 2",
+  },
+]);
+
+export const adsense_wrapper = style([
+  common_wrapper,
+  {
+    gridColumn: "3 / 4",
+    gridRow: "1 / 2",
+  },
+]);
+
+export const promotion_image_wrapper = style([
+  common_wrapper,
+  {
+    gridColumn: "1 / 2",
+    gridRow: "2 / 3",
+  },
+]);
+
+export const supportor_wrapper = style([
+  common_wrapper,
+  {
+    gridColumn: "2 / 4",
+    gridRow: "2 / 3",
+  },
+]);
+
+// common main sub theme part
+const sub_theme_wrapper = style({
+  display: "grid",
+  border: "1px solid red",
+  gridTemplateRows: "3fr 7fr",
+  padding: 5,
+});
+
+export const sub_theme_title = style({
+  border: "1px solid black",
+  fontSize: vars.fontSize.medium,
+  display: "flex",
+  alignItems: "center",
+});
+
+export const product_item_wrapper = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "red",
+  fontSize: vars.fontSize.XLarge,
 });
 
 // today's product part
-export const today_product_container = style({
-  gridColumn: "1 / 3",
-  gridRow: "3 / 4",
-});
+export const today_product_container = style([
+  sub_theme_wrapper,
+  {
+    gridColumn: "1 / 3",
+    gridRow: "3 / 4",
+  },
+]);
 
 // top deal
-export const top_deal_container = style({
-  gridColumn: "1 / 3",
-  gridRow: "4 / 5",
-});
+export const top_deal_container = style([
+  sub_theme_wrapper,
+  {
+    gridColumn: "1 / 3",
+    gridRow: "4 / 5",
+  },
+]);
 
 // adsense part
 
