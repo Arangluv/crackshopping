@@ -35,6 +35,7 @@ export const main_content_container = style({
   gridRow: "2 / 3",
   gridColumn: "1 / 4",
   display: "grid",
+  gap: 5,
   gridTemplateColumns: "1fr 4fr",
   gridTemplateRows: "repeat(5, minmax(200px, auto))",
   minHeight: "100vh",
@@ -203,6 +204,7 @@ const sub_theme_wrapper = style({
   display: "grid",
   gridTemplateRows: "minmax(50px, auto) minmax(50px, auto) minmax(50px, auto)",
   padding: 5,
+  marginTop: "2rem",
 });
 
 export const sub_theme_title = style({
@@ -364,4 +366,9 @@ export const top_deal_container = style([
 export const adsense_container = style({
   gridColumn: "1 / 3",
   gridRow: "5 / 6",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  border: `1px solid ${vars.themeColor.color.border}`,
+  borderRadius: 5,
 });
