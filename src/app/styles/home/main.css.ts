@@ -206,7 +206,6 @@ const sub_theme_wrapper = style({
 });
 
 export const sub_theme_title = style({
-  border: "1px solid black",
   fontSize: vars.fontSize.medium,
   display: "flex",
   alignItems: "center",
@@ -216,8 +215,21 @@ export const product_item_wrapper = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: "red",
   fontSize: vars.fontSize.XLarge,
+  // carausel setting
+  overflow: "hidden",
+  border: "1px solid black",
+});
+
+export const scroll_wrapper = style({
+  display: "flex",
+  border: "1px solid red",
+});
+
+export const slider_wrapper = style({
+  // flex: "flex-grow flex-shrink flex-basis"
+  flex: "0 0 100%",
+  minWidth: 0,
 });
 
 // today's product part
