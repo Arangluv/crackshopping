@@ -6,7 +6,8 @@ import { style } from "@vanilla-extract/css";
 export const main_container = style({
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
-  gridTemplateRows: "1fr 8fr 1fr",
+  gridTemplateRows:
+    "minmax(150px, auto) minmax(100vh, auto) minmax(150px, auto)",
   width: "100vw",
   minHeight: "100vh",
   padding: "0px 10vw",
@@ -35,7 +36,7 @@ export const main_content_container = style({
   gridColumn: "1 / 4",
   display: "grid",
   gridTemplateColumns: "1fr 4fr",
-  gridTemplateRows: "repeat(5, 1fr)",
+  gridTemplateRows: "repeat(5, minmax(200px, auto))",
   minHeight: "100vh",
 });
 export const grid_item = style({});
@@ -200,8 +201,7 @@ export const supportor_wrapper = style([
 // common main sub theme part
 const sub_theme_wrapper = style({
   display: "grid",
-  border: "1px solid red",
-  gridTemplateRows: "3fr 7fr",
+  gridTemplateRows: "minmax(50px, auto) minmax(50px, auto) minmax(50px, auto)",
   padding: 5,
 });
 
@@ -209,29 +209,138 @@ export const sub_theme_title = style({
   fontSize: vars.fontSize.medium,
   display: "flex",
   alignItems: "center",
+  fontStyle: "normal",
+  color: vars.themeColor.color.accent,
+  fontWeight: vars.fontWeight.large,
 });
-
+export const sub_title_emphasis = style({
+  position: "relative",
+  "::after": {
+    position: "absolute",
+    content: "",
+    width: "100%",
+    height: "30%",
+    display: "block",
+    backgroundColor: vars.themeColor.color.primary,
+    opacity: "0.2",
+    bottom: 0,
+  },
+});
 export const product_item_wrapper = style({
+  position: "relative",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   fontSize: vars.fontSize.XLarge,
   // carausel setting
   overflow: "hidden",
-  border: "1px solid black",
 });
 
 export const scroll_wrapper = style({
   display: "flex",
-  border: "1px solid red",
+  width: "100%",
+  height: "100%",
 });
 
 export const slider_wrapper = style({
   // flex: "flex-grow flex-shrink flex-basis"
   flex: "0 0 100%",
   minWidth: 0,
+  display: "flex",
+  justifyContent: "space-between",
 });
 
+export const slider_item_wrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  flex: "0 0 19%",
+  minHeight: "300px",
+  overflow: "hidden",
+});
+
+export const slider_item_image_wrapper = style({
+  width: "100%",
+  height: "250px",
+});
+export const product_detail_link = style({
+  display: "block",
+  width: "100%",
+  height: "100%",
+});
+
+export const product_image = style({
+  width: "100%",
+  height: "100%",
+  objectFit: "contain",
+});
+
+export const product_info_wrapper = style({
+  display: "grid",
+  width: "100%",
+  gridTemplateRows: "minmax(80px, 100px) 30px ",
+});
+
+export const product_title = style({
+  fontSize: vars.fontSize.regular,
+  color: "rgba(0,0,0,0.8)",
+  whiteSpace: "pre-wrap",
+  padding: 5,
+  paddingTop: 15,
+});
+
+export const product_price = style({
+  padding: 5,
+  fontSize: vars.fontSize.medium,
+  fontWeight: vars.fontWeight.large,
+  color: vars.themeColor.color.primary,
+  display: "flex",
+  alignItems: "flex-end",
+  justifyContent: "center",
+});
+
+export const progress_wrapper = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+const btn_icon = style({
+  width: 20,
+  height: 20,
+  color: vars.themeColor.color.accent,
+  opacity: 1,
+});
+
+export const prev_icon = style([
+  btn_icon,
+  {
+    marginRight: 10,
+  },
+]);
+
+export const next_icon = style([
+  btn_icon,
+  {
+    marginLeft: 10,
+  },
+]);
+
+export const icon_disable = style({
+  opacity: 0.6,
+});
+
+export const progress_item = style({
+  width: 12,
+  height: 12,
+  margin: "0 5px",
+  borderRadius: "50%",
+  backgroundColor: vars.themeColor.color.secondary,
+});
+
+export const progress_active = style({
+  backgroundColor: vars.themeColor.color.accent,
+  transform: "scale(1.3)",
+});
 // today's product part
 export const today_product_container = style([
   sub_theme_wrapper,
