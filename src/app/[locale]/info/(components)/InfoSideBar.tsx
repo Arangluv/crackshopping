@@ -3,6 +3,7 @@
 import * as style from "@style/info/info.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+
 type PageUrlName = "about-us" | "contacts" | "sitemap" | "terms";
 
 export default function InfoSideBar() {

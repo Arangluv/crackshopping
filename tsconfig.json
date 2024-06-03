@@ -19,7 +19,8 @@
     ],
     "paths": {
       "@/public/*": ["./public/*"],
-      "@style/*": ["./src/app/styles/*"]
+      "@style/*": ["./src/app/styles/*"],
+      "@src/*": ["./src/*"]
     }
   },
   "include": [

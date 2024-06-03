@@ -7,6 +7,8 @@ export const info_container = style({
   gridTemplateColumns: "14rem auto",
 });
 
-export const grid_item = style({
-  border: "1px solid red",
+export const info_main_wrapper = style({
+  paddingLeft: "2rem",
+  paddingTop: "2rem",
+  gridAutoRows: "manmax(3rem, auto)",
 });

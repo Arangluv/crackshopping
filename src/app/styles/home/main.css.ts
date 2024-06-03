@@ -7,7 +7,7 @@ export const main_container = style({
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
   gridTemplateRows:
-    "minmax(150px, auto) minmax(100vh, auto) minmax(150px, auto)",
+    "minmax(150px, auto) minmax(10vh, auto) minmax(150px, auto)",
   width: "100vw",
   minHeight: "100vh",
   padding: "0px 10vw",

@@ -37,6 +37,9 @@ globalStyle("a", {
   textDecoration: "none",
   color: "black",
 });
+globalStyle("p", {
+  lineHeight: 1.6,
+});
 globalStyle("ol, ul", {
   listStyle: "none",
 });

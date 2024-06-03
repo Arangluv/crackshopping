@@ -10,7 +10,8 @@ export default function InfoLayout({
     <div className={style.info_container}>
       {/** info navigation (clitent Component) */}
       <InfoSideBar />
-      <div className={style.grid_item}></div> {/** children position */}
+      <div className={style.info_main_wrapper}>{children}</div>{" "}
+      {/** children position */}
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
 // dark mode와 light mode 관계없이 적용되는 스타일들
 export const global = createGlobalTheme(":root", {
   fontSize: {
+    XXLarge: "4rem",
     XLarge: "48px",
     large: "36px",
     medium: "22px",
