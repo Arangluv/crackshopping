@@ -371,4 +371,5 @@ export const adsense_container = style({
   justifyContent: "center",
   border: `1px solid ${vars.themeColor.color.border}`,
   borderRadius: 5,
+  marginTop: "2rem",
 });
