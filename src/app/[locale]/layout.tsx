@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "@style/global.css";
 import { Karla } from "next/font/google";
-import Provider from "../../context/ThemeProvider";
-import Header from "./(components)/header/Header";
-import Footer from "./(components)/Footer";
-import * as globalStyle from "../../styles/global.css";
+import Provider from "../context/ThemeProvider";
+import Header from "./(home)/(components)/header/Header";
+import Footer from "./(home)/(components)/Footer";
+import * as globalStyle from "../styles/global.css";
 import * as style from "@style/home/main.css";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Compare the prices of items on large online markets such as Amazon and eBay and purchase them at low prices.",
 };
 const karla = Karla({
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
 export default function RootLayout({
