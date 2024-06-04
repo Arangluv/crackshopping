@@ -136,9 +136,72 @@ export const about_us_btn = style({
 // contact us part
 
 export const contact_us_container = style({
+  display: "grid",
+  gridTemplateRows: "22rem minmax(11rem, auto) 11rem",
   width: "100%",
-  height: "44rem",
+  minHeight: "44rem",
 });
+export const contact_us_main = style({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+export const contact_us_title = style({
+  fontSize: vars.fontSize.XXLarge,
+  fontWeight: vars.fontWeight.large,
+  marginBottom: "3rem",
+});
+
+export const contact_us_sub_title = style({
+  fontSize: vars.fontSize.regular,
+  color: "rgba(0,0,0,0.6)",
+});
+
+export const contact_method_wrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+export const icon_wrapper = style({
+  width: "8rem",
+  height: "8rem",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: vars.themeColor.color.secondary,
+  borderRadius: "50%",
+});
+
+export const contact_icon = style({
+  width: "3rem",
+  height: "3rem",
+  color: "rgba(0,0,0,0.7)",
+});
+
+export const adress_warpper = style({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+export const adress_text = style({
+  margin: "6px 0",
+});
+
+export const adress_title = style([
+  adress_text,
+  {
+    fontSize: vars.fontSize.regular,
+    fontStyle: "normal",
+    fontWeight: vars.fontWeight.medium,
+    color: vars.themeColor.color.primary,
+  },
+]);
 
 // sitemap part
 
