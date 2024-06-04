@@ -133,6 +133,69 @@ export const about_us_btn = style({
   },
 });
 
+// contact us part
+
+export const contact_us_container = style({
+  width: "100%",
+  height: "44rem",
+});
+
+// sitemap part
+
+export const sitemap_container = style({
+  display: "grid",
+  gridAutoRows: "minmax(11rem, auto)",
+  width: "100%",
+  minHeight: "44rem",
+});
+
+export const sitemap_sub_wrapper = style({
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr 1fr 1fr",
+  gap: 10,
+  width: "100%",
+  height: "auto",
+});
+
+export const root_category_wrapper = style({
+  display: "grid",
+  gridTemplateRows: "30px",
+  gridAutoRows: "minmax(2rem, auto)",
+  gap: 5,
+});
+export const sub_category_flex_wrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  height: "fit-content",
+});
+export const sub_category_wrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  marginBottom: "1rem",
+});
+
+export const sub_category_item = style({
+  display: "grid",
+  gridAutoRows: "2rem minmax(10rem, auto)",
+});
+
+export const root_category_title = style({
+  fontSize: vars.fontSize.regular,
+  borderBottom: "1px solid black",
+});
+
+export const sub_category_title = style({
+  color: "rgba(0,0,0,0.8)",
+  marginBottom: 10,
+});
+
+export const children_title = style({
+  padding: 5,
+  backgroundColor: vars.themeColor.color.secondary,
+});
+
 export const grid_item = style({
-  border: "1px solid red",
+  height: "fit-content",
+  marginBottom: "2rem",
 });

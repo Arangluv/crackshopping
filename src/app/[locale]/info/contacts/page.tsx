@@ -1,3 +1,5 @@
+import * as style from "@style/info/info.css";
+
 export default function ContactUs() {
-  return <div></div>;
+  return <div className={style.contact_us_container}></div>;
 }

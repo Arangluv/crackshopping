@@ -11,7 +11,8 @@ export default function AboutUs() {
           <span className={`${style.main_title_text} ${style.text_accent}`}>
             Compare prices
           </span>
-          <span className={style.main_title_text}>Get the best shopping</span>
+          <span className={style.main_title_text}>Get the best</span>
+          <span className={style.main_title_text}>Shopping</span>
         </h2>
       </div>
       <div className={style.about_us_image_wrapper}>
