@@ -5,16 +5,16 @@ export default function Footer() {
   return (
     <footer className={style.footer_wrapper}>
       <div className={style.nav_wrapper}>
-        <Link className={style.nav_link} href="#">
+        <Link className={style.nav_link} href="/info/about-us">
           About Us
         </Link>
-        <Link className={style.nav_link} href="#">
+        <Link className={style.nav_link} href="/info/contacts">
           Contact Us
         </Link>
-        <Link className={style.nav_link} href="#">
+        <Link className={style.nav_link} href="/info/sitemap">
           Sitemap
         </Link>
-        <Link className={style.nav_link} href="#">
+        <Link className={style.nav_link} href="/info/terms">
           Terms of Use
         </Link>
       </div>

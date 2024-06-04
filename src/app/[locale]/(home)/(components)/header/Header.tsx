@@ -15,7 +15,7 @@ export default async function Header({ locale }: IProps) {
   return (
     <header className={style.header_container}>
       <div className={style.logo_wrapper}>
-        <a href="#">
+        <a href="/">
           <Image
             src={"/assets/logo/logo.png"}
             alt="logo image"
