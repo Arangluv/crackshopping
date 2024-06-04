@@ -6,11 +6,8 @@ export const search_main_container = style({
   display: "grid",
   gridTemplateRows: "minmax(10rem, 12rem) minmax(80vh, auto)",
   gridTemplateColumns: "minmax(16rem, 18rem) minmax(10rem, auto)",
-  border: "1px solid red",
   height: "100vh",
   width: "100%",
 });
 
-export const grid_item = style({
-  border: "1px solid red",
-});
+export const grid_item = style({});
