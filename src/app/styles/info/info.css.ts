@@ -195,7 +195,39 @@ export const children_title = style({
   backgroundColor: vars.themeColor.color.secondary,
 });
 
-export const grid_item = style({
+export const total_sub_category_wrapper = style({
   height: "fit-content",
+  marginBottom: "2rem",
+});
+
+// ternms of use part
+
+export const terms_container = style({
+  minHeight: "44rem",
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+});
+export const adjust_width_wrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  width: "80%",
+});
+export const terms_title = style({
+  color: vars.themeColor.color.primary,
+  fontWeight: vars.fontWeight.large,
+  fontSize: vars.fontSize.large,
+  marginBottom: "2rem",
+});
+
+export const terms_paragraph = style({
+  lineHeight: 1.6,
+  color: "rgba(0,0,0,0.8)",
+  marginBottom: "2rem",
+});
+
+export const terms_sub_title = style({
+  fontWeight: vars.fontWeight.medium,
+  fontSize: vars.fontSize.medium,
   marginBottom: "2rem",
 });

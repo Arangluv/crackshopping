@@ -122,7 +122,7 @@ function CategoryItem3() {
 export default function Sitemap() {
   return (
     <div className={style.sitemap_container}>
-      <div className={style.grid_item}>
+      <div className={style.total_sub_category_wrapper}>
         <div className={style.sitemap_sub_wrapper}>
           <CategoryItem3 />
           <CategoryItem2 />
@@ -130,7 +130,7 @@ export default function Sitemap() {
           <CategoryItem1 />
         </div>
       </div>
-      <div className={style.grid_item}>
+      <div className={style.total_sub_category_wrapper}>
         <div className={style.sitemap_sub_wrapper}>
           <CategoryItem1 />
           <CategoryItem2 />
@@ -138,7 +138,7 @@ export default function Sitemap() {
           <CategoryItem1 />
         </div>
       </div>
-      <div className={style.grid_item}>
+      <div className={style.total_sub_category_wrapper}>
         <div className={style.sitemap_sub_wrapper}>
           <CategoryItem1 />
           <CategoryItem2 />
