@@ -2,8 +2,8 @@
 
 import * as style from "@style/home/main.css";
 import useEmblaCarousel from "embla-carousel-react";
-import { EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 
 import Image from "next/image";
@@ -41,10 +41,7 @@ export default function TodayProduct() {
         <div className={style.scroll_wrapper}>
           <ul className={style.slider_wrapper}>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_1.webp"
@@ -61,13 +58,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_2.webp"
@@ -84,13 +78,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_3.webp"
@@ -107,13 +98,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_4.webp"
@@ -130,13 +118,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_5.webp"
@@ -153,15 +138,12 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className={style.slider_wrapper}>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_1.webp"
@@ -178,13 +160,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_2.webp"
@@ -201,13 +180,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_3.webp"
@@ -224,13 +200,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_4.webp"
@@ -247,13 +220,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_5.webp"
@@ -270,15 +240,12 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className={style.slider_wrapper}>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_1.webp"
@@ -295,13 +262,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_2.webp"
@@ -318,13 +282,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_3.webp"
@@ -341,13 +302,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_4.webp"
@@ -364,13 +322,10 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className={style.slider_item_wrapper}>
-              <a
-                href="#product-detail-link"
-                className={style.product_detail_link}
-              >
+              <Link href="/search" className={style.product_detail_link}>
                 <div className={style.slider_item_image_wrapper}>
                   <Image
                     src="/assets/images/today-products/today-product_5.webp"
@@ -387,7 +342,7 @@ export default function TodayProduct() {
                   </span>
                   <span className={style.product_price}>$130.00</span>
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
