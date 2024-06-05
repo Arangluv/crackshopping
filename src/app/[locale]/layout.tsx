@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import "../../styles/global.css";
-import Provider from "../../context/ThemeProvider";
-import Header from "./(components)/header/Header";
-import Footer from "./(components)/Footer";
-import * as globalStyle from "../../styles/global.css";
-import * as style from "../../styles/home/main.css";
+import "@style/global.css";
+import { Karla } from "next/font/google";
+import Provider from "../context/ThemeProvider";
+import Header from "./(home)/(components)/header/Header";
+import Footer from "./(home)/(components)/Footer";
+import * as globalStyle from "../styles/global.css";
+import * as style from "@style/home/main.css";
 
 export const metadata: Metadata = {
   title: "Shop Smart | CrackShopping",
   description:
     "Compare the prices of items on large online markets such as Amazon and eBay and purchase them at low prices.",
 };
-
+const karla = Karla({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
 export default function RootLayout({
   children,
   params: { locale },
@@ -21,13 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={locale}>
-      <body className={globalStyle.hidden_scroll}>
+      <body className={`${globalStyle.hidden_scroll} ${karla.className}`}>
         <Provider>
-          <main className={style.main_container}>
+          <div className={style.main_container}>
             <Header locale={locale} />
             {children}
             <Footer />
-          </main>
+          </div>
         </Provider>
       </body>
     </html>
