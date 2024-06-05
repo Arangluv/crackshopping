@@ -33,6 +33,7 @@ const themeColor = createThemeContract({
     secondary: "",
     accent: "",
     border: "",
+    secondaryText: "",
   },
 });
 
@@ -44,6 +45,7 @@ export const light = createTheme(themeColor, {
     secondary: "#DDDBFF",
     primary: "#443DFF",
     border: "rgba(0,0,0,0.2)",
+    secondaryText: "rgba(0,0,0,0.8)",
   },
 });
 
