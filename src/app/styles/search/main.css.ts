@@ -6,7 +6,7 @@ export const search_main_container = style({
   display: "grid",
   gridTemplateRows: "minmax(10rem, 12rem) minmax(80vh, auto)",
   gridTemplateColumns: "minmax(16rem, 18rem) minmax(10rem, auto)",
-  height: "100vh",
+  minHeight: "100vh",
   width: "100%",
 });
 

@@ -29,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/custom.d.ts",
-    "src/middleware.ts"
+    "src/middleware.ts",
+    "src/app/[locale]/test.ts"
   ],
   "exclude": ["node_modules"]
 }
