@@ -373,3 +373,60 @@ export const adsense_container = style({
   borderRadius: 5,
   marginTop: "2rem",
 });
+
+// Deleted after API approval (Overlay part)
+
+export const overlay_container = style({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "rgba(0,0,0,0.6)",
+  zIndex: 999,
+});
+
+export const notice_wrapper = style({
+  position: "relative",
+  width: "60%",
+  height: "80%",
+  backgroundColor: "white",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+export const close_icon = style({
+  position: "absolute",
+  top: 30,
+  right: 30,
+  width: 40,
+  height: 40,
+  color: vars.themeColor.color.primary,
+  ":hover": {
+    cursor: "pointer",
+  },
+});
+
+export const overlay_title = style({
+  fontSize: vars.fontSize.XLarge,
+  fontWeight: vars.fontWeight.large,
+  marginBottom: "2rem",
+});
+
+export const overlay_text = style({
+  fontSize: vars.fontSize.regular,
+  width: "80%",
+  color: vars.themeColor.color.secondaryText,
+  marginBottom: "1.5rem",
+  lineHeight: 1.3,
+});
+
+export const overlay_link = style({
+  color: vars.themeColor.color.primary,
+  fontWeight: vars.fontWeight.large,
+});
