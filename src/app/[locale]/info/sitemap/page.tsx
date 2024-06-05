@@ -5,21 +5,21 @@ function CategoryItem1() {
   return (
     <div className={style.root_category_wrapper}>
       <h3 className={style.root_category_title}>
-        <Link href="#">Appliances</Link>
+        <Link href="http://www.example.com">Appliances</Link>
       </h3>
       <div className={style.sub_category_flex_wrapper}>
         <dl className={style.sub_category_wrapper}>
           <dt className={style.sub_category_title}>
-            <Link href="#">Laundry Appliances</Link>
+            <Link href="http://www.example.com">Laundry Appliances</Link>
           </dt>
           <dd className={style.children_title}>
-            <Link href="#">Washers & Dryers</Link>
+            <Link href="http://www.example.com">Washers & Dryers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Irons & Garment Steamers</Link>
+            <Link href="http://www.example.com">Irons & Garment Steamers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Trouser Pressers</Link>
+            <Link href="http://www.example.com">Trouser Pressers</Link>
           </dd>
         </dl>
       </div>
@@ -30,49 +30,49 @@ function CategoryItem2() {
   return (
     <div className={style.root_category_wrapper}>
       <h3 className={style.root_category_title}>
-        <Link href="#">Appliances</Link>
+        <Link href="http://www.example.com">Appliances</Link>
       </h3>
       <div className={style.sub_category_flex_wrapper}>
         <dl className={style.sub_category_wrapper}>
           <dt className={style.sub_category_title}>
-            <Link href="#">Laundry Appliances</Link>
+            <Link href="http://www.example.com">Laundry Appliances</Link>
           </dt>
           <dd className={style.children_title}>
-            <Link href="#">Washers & Dryers</Link>
+            <Link href="http://www.example.com">Washers & Dryers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Irons & Garment Steamers</Link>
+            <Link href="http://www.example.com">Irons & Garment Steamers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Trouser Pressers</Link>
+            <Link href="http://www.example.com">Trouser Pressers</Link>
           </dd>
         </dl>
         <dl className={style.sub_category_wrapper}>
           <dt className={style.sub_category_title}>
-            <Link href="#">Laundry Appliances</Link>
+            <Link href="http://www.example.com">Laundry Appliances</Link>
           </dt>
           <dd className={style.children_title}>
-            <Link href="#">Washers & Dryers</Link>
+            <Link href="http://www.example.com">Washers & Dryers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Irons & Garment Steamers</Link>
+            <Link href="http://www.example.com">Irons & Garment Steamers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Trouser Pressers</Link>
+            <Link href="http://www.example.com">Trouser Pressers</Link>
           </dd>
         </dl>
         <dl className={style.sub_category_wrapper}>
           <dt className={style.sub_category_title}>
-            <Link href="#">Laundry Appliances</Link>
+            <Link href="http://www.example.com">Laundry Appliances</Link>
           </dt>
           <dd className={style.children_title}>
-            <Link href="#">Washers & Dryers</Link>
+            <Link href="http://www.example.com">Washers & Dryers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Irons & Garment Steamers</Link>
+            <Link href="http://www.example.com">Irons & Garment Steamers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Trouser Pressers</Link>
+            <Link href="http://www.example.com">Trouser Pressers</Link>
           </dd>
         </dl>
       </div>
@@ -83,35 +83,35 @@ function CategoryItem3() {
   return (
     <div className={style.root_category_wrapper}>
       <h3 className={style.root_category_title}>
-        <Link href="#">Appliances</Link>
+        <Link href="http://www.example.com">Appliances</Link>
       </h3>
       <div className={style.sub_category_flex_wrapper}>
         <dl className={style.sub_category_wrapper}>
           <dt className={style.sub_category_title}>
-            <Link href="#">Laundry Appliances</Link>
+            <Link href="http://www.example.com">Laundry Appliances</Link>
           </dt>
           <dd className={style.children_title}>
-            <Link href="#">Washers & Dryers</Link>
+            <Link href="http://www.example.com">Washers & Dryers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Irons & Garment Steamers</Link>
+            <Link href="http://www.example.com">Irons & Garment Steamers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Trouser Pressers</Link>
+            <Link href="http://www.example.com">Trouser Pressers</Link>
           </dd>
         </dl>
         <dl className={style.sub_category_wrapper}>
           <dt className={style.sub_category_title}>
-            <Link href="#">Laundry Appliances</Link>
+            <Link href="http://www.example.com">Laundry Appliances</Link>
           </dt>
           <dd className={style.children_title}>
-            <Link href="#">Washers & Dryers</Link>
+            <Link href="http://www.example.com">Washers & Dryers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Irons & Garment Steamers</Link>
+            <Link href="http://www.example.com">Irons & Garment Steamers</Link>
           </dd>
           <dd className={style.children_title}>
-            <Link href="#">Trouser Pressers</Link>
+            <Link href="http://www.example.com">Trouser Pressers</Link>
           </dd>
         </dl>
       </div>

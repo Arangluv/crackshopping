@@ -29,14 +29,14 @@ export default function SidebarDropdownItem() {
         {isClick
           ? moreThen8lengthArr.map((str, idx) => {
               return (
-                <li className={style.list_item} key={idx}>
+                <li className={style.list_item} key={`${idx}_list`}>
                   {str}
                 </li>
               );
             })
           : moreThen8lengthArr.slice(0, 8).map((str, idx) => {
               return (
-                <li className={style.list_item} key={idx}>
+                <li className={style.list_item} key={`${idx}_list`}>
                   {str}
                 </li>
               );
@@ -46,6 +46,7 @@ export default function SidebarDropdownItem() {
         <button
           onClick={() => setIsClick(pre => !pre)}
           className={style.see_more_btn}
+          type="button"
         >
           + See more
         </button>

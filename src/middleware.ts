@@ -5,7 +5,7 @@ import Negotiator from "negotiator";
 // match(languages, locales, defaultLocale);
 
 // 지원하고자 하는 언어는 순서대로 영어, 독일어, 불어, 이탈리아어
-let locales = ["en", "de", "fr", "it"];
+const locales = ["en", "de", "fr", "it"];
 
 const getLocale = (req: NextRequest) => {
   const language = new Negotiator({
@@ -13,7 +13,7 @@ const getLocale = (req: NextRequest) => {
       "accept-language": req.headers.get("accept-language"),
     },
   }).languages();
-  let defaultLocale = "en";
+  const defaultLocale = "en";
   return match(language, locales, defaultLocale);
 };
 export function middleware(req: NextRequest) {

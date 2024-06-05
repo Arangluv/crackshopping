@@ -50,7 +50,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -73,7 +73,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -96,7 +96,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -119,7 +119,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -142,7 +142,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -167,7 +167,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -190,7 +190,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -213,7 +213,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -236,7 +236,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -259,7 +259,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -284,7 +284,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -307,7 +307,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -330,7 +330,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -353,7 +353,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -376,7 +376,7 @@ export default function TopDeal() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -397,7 +397,7 @@ export default function TopDeal() {
             <div
               key={idx}
               className={`${style.progress_item} ${idx === selectedIndex ? style.progress_active : ""}`}
-            ></div>
+            />
           );
         })}
         <FaAngleRight onClick={handleClickNext} className={style.next_icon} />

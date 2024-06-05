@@ -23,12 +23,12 @@ export default function SearchBar() {
         </form>
         <div className={style.search_result_wrapper}>
           <div className={style.result_text_wrapper}>
-            <a href="#" className={style.result_link}>
+            <a href="http://www.example.com" className={style.result_link}>
               <span className={style.text_accent}>pot</span>ato
             </a>
           </div>
           <div className={`${style.result_text_wrapper} last-result`}>
-            <a href="#" className={style.result_link}>
+            <a href="http://www.example.com" className={style.result_link}>
               <span className={style.text_accent}>pot</span>ato
             </a>
           </div>

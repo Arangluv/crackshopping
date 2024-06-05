@@ -2,6 +2,7 @@ import * as style from "@style/info/info.css";
 import Image from "next/image";
 import Shopping from "@src/app/assets/images/info_shopping.png";
 import Link from "next/link";
+
 export default function AboutUs() {
   return (
     <div className={style.about_us_container}>
@@ -18,10 +19,10 @@ export default function AboutUs() {
       <div className={style.about_us_image_wrapper}>
         <Image
           src={Shopping}
-          fill={true}
-          alt={"shopping cartoon image"}
+          fill
+          alt="shopping cartoon image"
           className={style.about_us_image}
-        ></Image>
+        />
       </div>
       <div className={style.about_us_description_wrapper}>
         <p className={style.about_us_description_text}>

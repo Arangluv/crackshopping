@@ -1,8 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "next-themes";
 import { light } from "../styles/theme.css";
-import { useEffect, useState } from "react";
 
 export default function Provider({ children }: { children: React.ReactNode }) {
   const [isMount, setMount] = useState(false);

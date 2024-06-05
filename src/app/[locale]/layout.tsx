@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "@style/global.css";
 import { Karla } from "next/font/google";
+import * as style from "@style/home/main.css";
 import Provider from "../context/ThemeProvider";
 import Header from "./(home)/(components)/header/Header";
 import Footer from "./(home)/(components)/Footer";
 import * as globalStyle from "../styles/global.css";
-import * as style from "@style/home/main.css";
 
 export const metadata: Metadata = {
   title: "Shop Smart | CrackShopping",

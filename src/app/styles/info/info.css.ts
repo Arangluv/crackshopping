@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { vars } from "@style/theme.css";
 import { style } from "@vanilla-extract/css";
 

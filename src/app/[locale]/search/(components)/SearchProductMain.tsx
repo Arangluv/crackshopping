@@ -3,14 +3,16 @@ import Image from "next/image";
 import WetWipes_1 from "@src/app/assets/images/wet_wipes_1.jpg";
 import WetWipes_2 from "@src/app/assets/images/wet_wipes_2.jpg";
 import WetWipes_3 from "@src/app/assets/images/wet_wipes_3.jpg";
-import WetWipes_4 from "@src/app/assets/images/wet_wipes_3.jpg";
-import WetWipes_5 from "@src/app/assets/images/wet_wipes_3.jpg";
+import WetWipes_4 from "@src/app/assets/images/wet_wipes_4.jpg";
+import WetWipes_5 from "@src/app/assets/images/wet_wipes_5.jpg";
 import AmazonLogo from "@src/app/assets/images/amazon_logo.png";
 import EbayLogo from "@src/app/assets/images/ebay_log.png";
-import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+
+// FaRegStar is empty star
 
 export default function SearchProductMain() {
-  let mockData = [
+  const mockData = [
     {
       title:
         "Amazon Elements Baby Wipes, Sensitive, 810 Count, Flip-Top Packs, Pack of 9",
@@ -63,8 +65,8 @@ export default function SearchProductMain() {
     <ul className={style.product_main_container}>
       {mockData.map((product, idx) => {
         return (
-          <li key={idx} className={style.product_list_wrapper}>
-            <a href="#" className={style.product_link}>
+          <li key={`${idx}_list`} className={style.product_list_wrapper}>
+            <a href="http://www.example.com" className={style.product_link}>
               <dl className={style.product_detail_wrapper}>
                 <dt className={style.product_image_wrapper}>
                   <Image
@@ -73,7 +75,7 @@ export default function SearchProductMain() {
                     height={100}
                     alt="user search product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </dt>
                 <dd className={style.product_title_wrapper}>
                   <span className={style.product_title_text}>
@@ -96,7 +98,7 @@ export default function SearchProductMain() {
                           height={40}
                           alt="product prodiver retailer logo"
                           className={style.retailer_logo}
-                        ></Image>
+                        />
                       ) : (
                         <Image
                           src={EbayLogo}
@@ -104,7 +106,7 @@ export default function SearchProductMain() {
                           height={40}
                           alt="product prodiver retailer logo"
                           className={style.retailer_logo}
-                        ></Image>
+                        />
                       )}
                     </div>
                   </div>

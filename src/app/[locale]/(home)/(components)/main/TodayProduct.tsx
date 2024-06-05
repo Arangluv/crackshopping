@@ -35,7 +35,7 @@ export default function TodayProduct() {
   return (
     <section className={style.today_product_container}>
       <em className={style.sub_theme_title}>
-        <span className={style.sub_title_emphasis}>Today's Products</span>
+        <span className={style.sub_title_emphasis}>Today&apos;s Products</span>
       </em>
       <div className={style.product_item_wrapper} ref={emblaRef}>
         <div className={style.scroll_wrapper}>
@@ -49,7 +49,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -69,7 +69,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -89,7 +89,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -109,7 +109,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -129,7 +129,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -151,7 +151,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -171,7 +171,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -191,7 +191,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -211,7 +211,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -231,7 +231,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -253,7 +253,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -273,7 +273,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -293,7 +293,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -313,7 +313,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -333,7 +333,7 @@ export default function TodayProduct() {
                     height={100}
                     alt="today's product image"
                     className={style.product_image}
-                  ></Image>
+                  />
                 </div>
                 <div className={style.product_info_wrapper}>
                   <span className={style.product_title}>
@@ -354,7 +354,7 @@ export default function TodayProduct() {
             <div
               key={idx}
               className={`${style.progress_item} ${idx === selectedIndex ? style.progress_active : ""}`}
-            ></div>
+            />
           );
         })}
         <FaAngleRight onClick={handleClickNext} className={style.next_icon} />

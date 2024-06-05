@@ -1,13 +1,8 @@
 import * as style from "@style/home/main.css";
-import { Dispatch, SetStateAction } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
-interface OverlayProps {
-  setIsClose: Dispatch<SetStateAction<boolean>>;
-}
-
 // Deleted after API approval
-export default function Overlay<OverlayProps>({ setIsClose }) {
+export default function Overlay({ setIsClose }) {
   return (
     <div className={style.overlay_container}>
       <div className={style.notice_wrapper}>
@@ -28,7 +23,7 @@ export default function Overlay<OverlayProps>({ setIsClose }) {
           by applying the API in detail.
         </span>
         <span className={style.overlay_text}>
-          This website will support multiple languages ​​(English, Italian,
+          This website will support multiple languages​​(English, Italian,
           French, German).
         </span>
         <span className={style.overlay_text}>The sitemap is as follows.</span>

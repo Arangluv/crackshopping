@@ -12,7 +12,7 @@ export default async function initTranslations(
   namespace: string,
 ) {
   const i18nInstance = createInstance();
-  let resources = null;
+  const resources = null;
   i18nInstance
     .use(initReactI18next)
     .use(

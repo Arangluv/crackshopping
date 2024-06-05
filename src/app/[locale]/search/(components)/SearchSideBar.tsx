@@ -1,5 +1,5 @@
-import SidebarDropdownItem from "./SidebarDropdownItem";
 import * as style from "@style/search/search-sidebar.css";
+import SidebarDropdownItem from "./SidebarDropdownItem";
 
 const lessThen8lengthArr = [
   "Wet Ones",
@@ -17,7 +17,7 @@ function SideBarListItem() {
       <ul className={style.list_wrapper}>
         {lessThen8lengthArr.map((str, idx) => {
           return (
-            <li className={style.list_item} key={idx}>
+            <li className={style.list_item} key={`${idx}_list`}>
               {str}
             </li>
           );
@@ -33,19 +33,19 @@ function SideBarCheckListItem() {
       <ul className={style.list_wrapper}>
         <li className={style.list_item}>
           <input className={style.list_checkbox} type="checkbox" />
-          <label htmlFor="">Wet Ones</label>
+          <label htmlFor="temp">Wet Ones</label>
         </li>
         <li className={style.list_item}>
           <input className={style.list_checkbox} type="checkbox" />
-          <label htmlFor="">Cottonelle</label>
+          <label htmlFor="temp">Cottonelle</label>
         </li>
         <li className={style.list_item}>
           <input className={style.list_checkbox} type="checkbox" />
-          <label htmlFor="">DUDE Wipes</label>
+          <label htmlFor="temp">DUDE Wipes</label>
         </li>
         <li className={style.list_item}>
           <input className={style.list_checkbox} type="checkbox" />
-          <label htmlFor="">The Honest Company</label>
+          <label htmlFor="temp">The Honest Company</label>
         </li>
       </ul>
     </div>

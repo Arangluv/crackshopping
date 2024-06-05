@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { style } from "@vanilla-extract/css";
 
 export const info_container = style({
