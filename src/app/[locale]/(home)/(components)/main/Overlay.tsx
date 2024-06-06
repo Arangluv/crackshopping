@@ -27,12 +27,16 @@ export default function Overlay({ setIsClose }) {
           French, German).
         </span>
         <span className={style.overlay_text}>The sitemap is as follows.</span>
-        <span className={style.overlay_text}>https://localhost:3000/</span>
-        <span className={style.overlay_text}>https://localhost:3000/info</span>
-        <span className={style.overlay_text}>
-          https://localhost:3000/search
+        <span className={style.overlay_text_link}>
+          https://crackshopping-git-main-hyunsooryus-projects.vercel.app/[locale]
         </span>
-        <span className={style.overlay_text}>
+        <span className={style.overlay_text_link}>
+          https://crackshopping-git-main-hyunsooryus-projects.vercel.app/[locale]/info
+        </span>
+        <span className={style.overlay_text_link}>
+          https://crackshopping-git-main-hyunsooryus-projects.vercel.app/[locale]/search
+        </span>
+        <span className={style.overlay_text_link}>
           If you are curious about my github, please visit the{" "}
           <a
             className={style.overlay_link}

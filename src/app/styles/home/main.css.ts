@@ -426,6 +426,13 @@ export const overlay_text = style({
   lineHeight: 1.3,
 });
 
+export const overlay_text_link = style([
+  overlay_text,
+  {
+    fontWeight: vars.fontWeight.large,
+  },
+]);
+
 export const overlay_link = style({
   color: vars.themeColor.color.primary,
   fontWeight: vars.fontWeight.large,
