@@ -47,6 +47,7 @@ export const grid_item = style({});
 export const sidebar_container = style({
   gridColumn: "1 / 2",
   gridRow: "1 / 3",
+  boxSizing: "border-box",
 });
 
 export const list_wrapper = style({

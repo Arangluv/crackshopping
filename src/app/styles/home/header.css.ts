@@ -74,6 +74,7 @@ export const search_bar_form = style({
 export const search_field = style({
   width: "100%",
   height: "100%",
+  border: "none",
 });
 export const search_label = style({
   display: "flex",
