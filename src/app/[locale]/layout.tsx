@@ -25,6 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={locale}>
+      <head>
+        <meta
+          name="impact-site-verification"
+          content="4bd71224-04e1-474f-bd04-545f334001b3"
+        />
+      </head>
       <body className={`${globalStyle.hidden_scroll} ${karla.className}`}>
         <Provider>
           <div className={style.main_container}>
