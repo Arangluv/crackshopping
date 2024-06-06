@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { globalStyle, style } from "@vanilla-extract/css";
 
 const resetTag =
@@ -18,6 +16,7 @@ globalStyle(resetTag, {
   verticalAlign: "baseline",
   boxSizing: "border-box",
 });
+
 globalStyle("body", {
   lineHeight: 1,
   height: "auto",
@@ -40,13 +39,9 @@ globalStyle("blockquote, q", {
   quotes: "none",
 });
 
-globalStyle(
-  `blockquote:before, blockquote:after,
-q:before, q:after`,
-  {
-    content: "none",
-  },
-);
+globalStyle("blockquote:before, blockquote:after, q:before, q:after", {
+  content: "none",
+});
 globalStyle("table", {
   borderCollapse: "collapse",
   borderSpacing: 0,
