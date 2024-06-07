@@ -5,7 +5,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
-
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
