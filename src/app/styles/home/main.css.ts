@@ -519,6 +519,8 @@ export const adsense_container = style({
   "@media": {
     "screen and (max-width:479px)": {
       gridRow: "5 / 6",
+      marginTop: "0",
+      marginBottom: "1rem",
     },
   },
 });
