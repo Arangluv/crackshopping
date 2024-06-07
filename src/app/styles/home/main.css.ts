@@ -39,6 +39,11 @@ export const main_content_container = style({
   gridTemplateColumns: "1fr 4fr",
   gridTemplateRows: "repeat(5, minmax(200px, auto))",
   minHeight: "100vh",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridTemplateRows: "repeat(6, minmax(200px, auto))",
+    },
+  },
 });
 export const grid_item = style({});
 
@@ -48,6 +53,12 @@ export const sidebar_container = style({
   gridColumn: "1 / 2",
   gridRow: "1 / 3",
   boxSizing: "border-box",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridColumn: "1 / 3",
+      gridRow: "3 / 4",
+    },
+  },
 });
 
 export const list_wrapper = style({
@@ -158,6 +169,12 @@ export const main_top_container = style({
   gridTemplateRows: "1fr 1fr",
   padding: 5,
   gap: 5,
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridColumn: "1 / 3",
+      gridRow: "1 / 3",
+    },
+  },
 });
 
 const common_wrapper = style({
@@ -350,6 +367,11 @@ export const today_product_container = style([
   {
     gridColumn: "1 / 3",
     gridRow: "3 / 4",
+    "@media": {
+      "screen and (max-width:479px)": {
+        gridRow: "4 / 5",
+      },
+    },
   },
 ]);
 
@@ -359,6 +381,12 @@ export const top_deal_container = style([
   {
     gridColumn: "1 / 3",
     gridRow: "4 / 5",
+
+    "@media": {
+      "screen and (max-width:479px)": {
+        gridRow: "5 / 6",
+      },
+    },
   },
 ]);
 
@@ -373,6 +401,11 @@ export const adsense_container = style({
   border: `1px solid ${vars.themeColor.color.border}`,
   borderRadius: 5,
   marginTop: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridRow: "6 / 7",
+    },
+  },
 });
 
 // Deleted after API approval (Overlay part)

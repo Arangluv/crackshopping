@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@style/global.css";
 import { Karla } from "next/font/google";
 import * as style from "@style/home/main.css";
@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   title: "Shop Smart | CrackShopping",
   description:
     "Compare the prices of items on large online markets such as Amazon and eBay and purchase them at low prices.",
+};
+export const viewport: Viewport = {
+  initialScale: 1,
+  maximumScale: 1,
+  minimumScale: 1,
+  userScalable: false,
 };
 const karla = Karla({
   weight: ["400", "500", "600"],
