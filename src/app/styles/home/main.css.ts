@@ -21,7 +21,7 @@ export const main_container = style({
       backgroundColor: "purple",
     },
     "screen and (max-width:479px)": {
-      padding: "0 10px",
+      padding: 0,
       "::-webkit-scrollbar": {
         display: "none",
       },
@@ -57,6 +57,7 @@ export const sidebar_container = style({
     "screen and (max-width:479px)": {
       gridColumn: "1 / 3",
       gridRow: "3 / 4",
+      border: "1px solid red",
     },
   },
 });
@@ -70,6 +71,17 @@ export const list_wrapper = style({
   backgroundColor: vars.themeColor.color.primary,
   padding: "5px 0 5px 5px",
   zIndex: 100,
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "grid",
+      gridTemplateColumns: "repeat(4, 1fr)",
+      gridAutoRows: "auto",
+      padding: "10px 5px 5px 5px",
+      alignItems: "stretch",
+      gap: "1rem",
+      backgroundColor: "transparent",
+    },
+  },
 });
 
 export const list_item_wrapper = style({
@@ -77,7 +89,7 @@ export const list_item_wrapper = style({
   alignItems: "center",
   color: vars.themeColor.color.background,
   width: "90%",
-  height: 40,
+  height: "3rem",
   paddingLeft: 5,
   borderTopLeftRadius: 5,
   borderBottomLeftRadius: 5,
@@ -86,10 +98,43 @@ export const list_item_wrapper = style({
     backgroundColor: vars.themeColor.color.background,
     color: vars.themeColor.color.accent,
   },
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "grid",
+      gridTemplateRows: "2rem minmax(2rem, auto)",
+      gap: 5,
+      justifyItems: "center",
+      width: "100%",
+      height: "100%",
+      backgroundColor: "transparent",
+    },
+  },
+});
+
+export const list_icon = style({
+  display: "none",
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "block",
+      width: "2rem",
+      height: "2rem",
+      marginBottom: "0.5rem",
+      color: vars.themeColor.color.text,
+    },
+  },
 });
 
 export const list_title = style({
   fontWeight: vars.fontWeight.large,
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+      color: vars.themeColor.color.text,
+      display: "block",
+      height: "100%",
+      textAlign: "center",
+    },
+  },
 });
 
 export const sub_wrapper = style({
@@ -114,6 +159,11 @@ export const sub_wrapper = style({
       borderTopRightRadius: 5,
       borderBottomRightRadius: 5,
       borderColor: vars.themeColor.color.primary,
+    },
+  },
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "none",
     },
   },
 });
@@ -166,11 +216,12 @@ export const main_top_container = style({
   backgroundColor: vars.themeColor.color.secondary,
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
-  gridTemplateRows: "1fr 1fr",
+  gridTemplateRows: "minmax(2rem, auto) minmax(2rem, auto)",
   padding: 5,
   gap: 5,
   "@media": {
     "screen and (max-width:479px)": {
+      gridTemplateColumns: "1fr 1fr",
       gridColumn: "1 / 3",
       gridRow: "1 / 3",
     },
@@ -190,6 +241,12 @@ export const site_banner_wrapper = style([
   {
     gridColumn: "1 / 3",
     gridRow: "1 / 2",
+    "@media": {
+      "screen and (max-width:479px)": {
+        gridColumn: "1 / 3",
+        minHeight: "20rem",
+      },
+    },
   },
 ]);
 
@@ -198,6 +255,13 @@ export const adsense_wrapper = style([
   {
     gridColumn: "3 / 4",
     gridRow: "1 / 2",
+    "@media": {
+      "screen and (max-width:479px)": {
+        gridColumn: "2 / 3",
+        gridRow: "2 / 3",
+        height: "10rem",
+      },
+    },
   },
 ]);
 
@@ -214,6 +278,11 @@ export const supportor_wrapper = style([
   {
     gridColumn: "2 / 4",
     gridRow: "2 / 3",
+    "@media": {
+      "screen and (max-width:479px)": {
+        display: "none",
+      },
+    },
   },
 ]);
 
@@ -223,6 +292,12 @@ const sub_theme_wrapper = style({
   gridTemplateRows: "minmax(50px, auto) minmax(50px, auto) minmax(50px, auto)",
   padding: 5,
   marginTop: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      border: "1px solid black",
+      marginTop: 0,
+    },
+  },
 });
 
 export const sub_theme_title = style({
@@ -247,13 +322,18 @@ export const sub_title_emphasis = style({
   },
 });
 export const product_item_wrapper = style({
+  // carausel setting
+  overflow: "hidden",
   position: "relative",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   fontSize: vars.fontSize.XLarge,
-  // carausel setting
-  overflow: "hidden",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+    },
+  },
 });
 
 export const scroll_wrapper = style({
