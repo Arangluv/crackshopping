@@ -57,7 +57,6 @@ export const sidebar_container = style({
     "screen and (max-width:479px)": {
       gridColumn: "1 / 3",
       gridRow: "3 / 4",
-      border: "1px solid red",
     },
   },
 });
@@ -294,7 +293,6 @@ const sub_theme_wrapper = style({
   marginTop: "2rem",
   "@media": {
     "screen and (max-width:479px)": {
-      border: "1px solid black",
       marginTop: 0,
     },
   },
@@ -307,6 +305,12 @@ export const sub_theme_title = style({
   fontStyle: "normal",
   color: vars.themeColor.color.accent,
   fontWeight: vars.fontWeight.large,
+  marginBottom: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      paddingLeft: 5,
+    },
+  },
 });
 export const sub_title_emphasis = style({
   position: "relative",
@@ -356,11 +360,21 @@ export const slider_item_wrapper = style({
   flex: "0 0 19%",
   minHeight: "300px",
   overflow: "hidden",
+  "@media": {
+    "screen and (max-width:479px)": {
+      flex: "0 0 49%",
+    },
+  },
 });
 
 export const slider_item_image_wrapper = style({
   width: "100%",
-  height: "250px",
+  height: "16rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      height: "12rem",
+    },
+  },
 });
 export const product_detail_link = style({
   display: "block",
@@ -378,6 +392,11 @@ export const product_info_wrapper = style({
   display: "grid",
   width: "100%",
   gridTemplateRows: "minmax(80px, 100px) 30px ",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridTemplateRows: "minmax(4rem, 8rem)",
+    },
+  },
 });
 
 export const product_title = style({
@@ -396,6 +415,11 @@ export const product_price = style({
   display: "flex",
   alignItems: "flex-end",
   justifyContent: "center",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.regular,
+    },
+  },
 });
 
 export const progress_wrapper = style({
@@ -409,6 +433,11 @@ const btn_icon = style({
   height: 20,
   color: vars.themeColor.color.accent,
   opacity: 1,
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "none",
+    },
+  },
 });
 
 export const prev_icon = style([
@@ -435,6 +464,12 @@ export const progress_item = style({
   margin: "0 5px",
   borderRadius: "50%",
   backgroundColor: vars.themeColor.color.secondary,
+  "@media": {
+    "screen and (max-width:479px)": {
+      width: 8,
+      height: 8,
+    },
+  },
 });
 
 export const progress_active = style({
@@ -464,7 +499,7 @@ export const top_deal_container = style([
 
     "@media": {
       "screen and (max-width:479px)": {
-        gridRow: "5 / 6",
+        gridRow: "6 / 7",
       },
     },
   },
@@ -483,7 +518,7 @@ export const adsense_container = style({
   marginTop: "2rem",
   "@media": {
     "screen and (max-width:479px)": {
-      gridRow: "6 / 7",
+      gridRow: "5 / 6",
     },
   },
 });
