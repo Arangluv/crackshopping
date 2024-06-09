@@ -394,6 +394,11 @@ export const terms_container = style({
   width: "100%",
   display: "flex",
   justifyContent: "center",
+  "@media": {
+    "screen and (max-width:479px)": {
+      marginTop: "1rem",
+    },
+  },
 });
 export const adjust_width_wrapper = style({
   display: "flex",
@@ -405,16 +410,29 @@ export const terms_title = style({
   fontWeight: vars.fontWeight.large,
   fontSize: vars.fontSize.large,
   marginBottom: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.medium,
+      marginBottom: "1.5rem",
+    },
+  },
 });
 
 export const terms_paragraph = style({
   lineHeight: 1.6,
   color: "rgba(0,0,0,0.8)",
   marginBottom: "2rem",
+  wordBreak: "break-word",
 });
 
 export const terms_sub_title = style({
   fontWeight: vars.fontWeight.medium,
   fontSize: vars.fontSize.medium,
   marginBottom: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      marginBottom: "1.5rem",
+      fontSize: vars.fontSize.regular,
+    },
+  },
 });
