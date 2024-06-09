@@ -300,6 +300,11 @@ export const sitemap_container = style({
   gridAutoRows: "minmax(11rem, auto)",
   width: "100%",
   minHeight: "44rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      marginTop: "1rem",
+    },
+  },
 });
 
 export const sitemap_sub_wrapper = style({
@@ -308,6 +313,14 @@ export const sitemap_sub_wrapper = style({
   gap: 10,
   width: "100%",
   height: "auto",
+  "@media": {
+    "screen and (max-width:479px)": {
+      padding: "0 10px",
+      width: "100vw",
+      overflow: "hidden",
+      boxSizing: "border-box",
+    },
+  },
 });
 
 export const root_category_wrapper = style({
@@ -315,6 +328,12 @@ export const root_category_wrapper = style({
   gridTemplateRows: "30px",
   gridAutoRows: "minmax(2rem, auto)",
   gap: 5,
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridTemplateRows: "18px",
+      gridAutoRows: "minmax(2rem, auto)",
+    },
+  },
 });
 export const sub_category_flex_wrapper = style({
   display: "flex",
@@ -336,16 +355,31 @@ export const sub_category_item = style({
 export const root_category_title = style({
   fontSize: vars.fontSize.regular,
   borderBottom: "1px solid black",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+    },
+  },
 });
 
 export const sub_category_title = style({
   color: "rgba(0,0,0,0.8)",
   marginBottom: 10,
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+    },
+  },
 });
 
 export const children_title = style({
   padding: 5,
   backgroundColor: vars.themeColor.color.secondary,
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.micro,
+    },
+  },
 });
 
 export const total_sub_category_wrapper = style({
