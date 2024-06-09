@@ -9,6 +9,14 @@ export const sidebar_container = style({
   display: "flex",
   flexDirection: "column",
   height: "fit-content",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridColumn: "none",
+      gridRow: "2 / 3",
+      flexDirection: "row",
+      border: "1px solid blue",
+    },
+  },
 });
 
 export const category_item_wrapper = style({
@@ -32,6 +40,11 @@ export const list_wrapper = style({
   flexDirection: "column",
   width: "95%",
   borderBottom: `1px solid ${vars.themeColor.color.border}`,
+  "@media": {
+    "screen and (max-width:479px)": {
+      display: "none",
+    },
+  },
 });
 
 export const list_dropdown_wrapper = style([

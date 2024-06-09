@@ -5,10 +5,9 @@ import WetWipes_2 from "@src/app/assets/images/wet_wipes_2.jpg";
 import WetWipes_3 from "@src/app/assets/images/wet_wipes_3.jpg";
 import WetWipes_4 from "@src/app/assets/images/wet_wipes_4.jpg";
 import WetWipes_5 from "@src/app/assets/images/wet_wipes_5.jpg";
-import AmazonLogo from "@src/app/assets/images/amazon_logo.png";
+import AmazonLogo from "@src/app/assets/images/amazon_logo_1.png";
 import EbayLogo from "@src/app/assets/images/ebay_log.png";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-
 // FaRegStar is empty star
 
 export default function SearchProductMain() {

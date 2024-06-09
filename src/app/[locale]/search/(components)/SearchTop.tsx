@@ -9,7 +9,7 @@ export default function SearchTop() {
   ];
   return (
     <div className={style.search_top_container}>
-      <div className={style.flex_box_align_center}>
+      <div className={style.keywords_wrapper}>
         {tempRecommendedLink.map((str, idx) => (
           <a
             className={style.recommended_keywords}
