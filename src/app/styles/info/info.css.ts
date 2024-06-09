@@ -10,9 +10,23 @@ export const sidebar_container = style({
   justifyContent: "flex-start",
   paddingTop: "8rem",
   paddingRight: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      flexDirection: "row",
+      padding: 0,
+      alignItems: "center",
+      justifyContent: "center",
+      borderBottom: `1px solid ${vars.themeColor.color.border}`,
+    },
+  },
 });
 export const list_item = style({
   margin: "1rem 0",
+  selectors: {
+    "&:not(:last-child)": {
+      marginRight: ".5rem",
+    },
+  },
 });
 export const link_text = style({
   color: vars.themeColor.color.text,
@@ -23,6 +37,11 @@ export const link_text = style({
   ":hover": {
     color: vars.themeColor.color.accent,
     opacity: 1,
+  },
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+    },
   },
 });
 
@@ -39,6 +58,12 @@ export const about_us_container = style({
   gridTemplateRows:
     "minmax(24rem, auto) minmax(10rem, auto) minmax(16rem, auto)",
   gridTemplateColumns: "3fr 2fr",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridTemplateRows:
+        "minmax(12rem, auto) minmax(10rem, auto) minmax(10rem, auto)",
+    },
+  },
 });
 
 export const main_title_wrapper = style({
@@ -59,6 +84,11 @@ export const main_title_text = style({
   marginBottom: "1rem",
   fontSize: vars.fontSize.XXLarge,
   fontWeight: vars.fontWeight.large,
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.medium,
+    },
+  },
 });
 
 export const text_accent = style({
@@ -103,6 +133,12 @@ export const about_us_description_text = style({
   backgroundColor: "white",
   fontSize: vars.fontSize.regular,
   color: "rgba(0,0,0, 0.7)",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+      wordBreak: "break-word",
+    },
+  },
 });
 
 export const user_action_wrapper = style({
@@ -111,6 +147,11 @@ export const user_action_wrapper = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
+  "@media": {
+    "screen and (max-width:479px)": {
+      paddingTop: "1rem",
+    },
+  },
 });
 
 export const btn_wrapper = style({
@@ -133,6 +174,13 @@ export const about_us_btn = style({
     backgroundColor: vars.themeColor.color.primary,
     color: vars.themeColor.color.background,
   },
+  "@media": {
+    "screen and (max-width:479px)": {
+      width: "7rem",
+      height: "2.5rem",
+      fontSize: vars.fontSize.small,
+    },
+  },
 });
 
 // contact us part
@@ -142,6 +190,12 @@ export const contact_us_container = style({
   gridTemplateRows: "22rem minmax(11rem, auto) 11rem",
   width: "100%",
   minHeight: "44rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      minHeight: "22rem",
+      gridTemplateRows: "11rem minmax(11rem, auto)",
+    },
+  },
 });
 export const contact_us_main = style({
   display: "flex",
@@ -154,11 +208,24 @@ export const contact_us_title = style({
   fontSize: vars.fontSize.XXLarge,
   fontWeight: vars.fontWeight.large,
   marginBottom: "3rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.medium,
+    },
+  },
 });
 
 export const contact_us_sub_title = style({
   fontSize: vars.fontSize.regular,
   color: "rgba(0,0,0,0.6)",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+      padding: "0 3rem",
+      textAlign: "center",
+      lineHeight: 1.5,
+    },
+  },
 });
 
 export const contact_method_wrapper = style({
@@ -166,6 +233,11 @@ export const contact_method_wrapper = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
+  "@media": {
+    "screen and (max-width:479px)": {
+      justifyContent: "flex-start",
+    },
+  },
 });
 
 export const icon_wrapper = style({
@@ -176,6 +248,12 @@ export const icon_wrapper = style({
   justifyContent: "center",
   backgroundColor: vars.themeColor.color.secondary,
   borderRadius: "50%",
+  "@media": {
+    "screen and (max-width:479px)": {
+      width: "6rem",
+      height: "6rem",
+    },
+  },
 });
 
 export const contact_icon = style({
@@ -193,6 +271,11 @@ export const adress_warpper = style({
 
 export const adress_text = style({
   margin: "6px 0",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.middleSmall,
+    },
+  },
 });
 
 export const adress_title = style([
@@ -202,6 +285,11 @@ export const adress_title = style([
     fontStyle: "normal",
     fontWeight: vars.fontWeight.medium,
     color: vars.themeColor.color.primary,
+    "@media": {
+      "screen and (max-width:479px)": {
+        fontSize: vars.fontSize.middleSmall,
+      },
+    },
   },
 ]);
 
@@ -212,6 +300,11 @@ export const sitemap_container = style({
   gridAutoRows: "minmax(11rem, auto)",
   width: "100%",
   minHeight: "44rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      marginTop: "1rem",
+    },
+  },
 });
 
 export const sitemap_sub_wrapper = style({
@@ -220,6 +313,14 @@ export const sitemap_sub_wrapper = style({
   gap: 10,
   width: "100%",
   height: "auto",
+  "@media": {
+    "screen and (max-width:479px)": {
+      padding: "0 10px",
+      width: "100vw",
+      overflow: "hidden",
+      boxSizing: "border-box",
+    },
+  },
 });
 
 export const root_category_wrapper = style({
@@ -227,6 +328,12 @@ export const root_category_wrapper = style({
   gridTemplateRows: "30px",
   gridAutoRows: "minmax(2rem, auto)",
   gap: 5,
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridTemplateRows: "18px",
+      gridAutoRows: "minmax(2rem, auto)",
+    },
+  },
 });
 export const sub_category_flex_wrapper = style({
   display: "flex",
@@ -248,16 +355,31 @@ export const sub_category_item = style({
 export const root_category_title = style({
   fontSize: vars.fontSize.regular,
   borderBottom: "1px solid black",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+    },
+  },
 });
 
 export const sub_category_title = style({
   color: "rgba(0,0,0,0.8)",
   marginBottom: 10,
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+    },
+  },
 });
 
 export const children_title = style({
   padding: 5,
   backgroundColor: vars.themeColor.color.secondary,
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.micro,
+    },
+  },
 });
 
 export const total_sub_category_wrapper = style({
@@ -272,6 +394,11 @@ export const terms_container = style({
   width: "100%",
   display: "flex",
   justifyContent: "center",
+  "@media": {
+    "screen and (max-width:479px)": {
+      marginTop: "1rem",
+    },
+  },
 });
 export const adjust_width_wrapper = style({
   display: "flex",
@@ -283,16 +410,29 @@ export const terms_title = style({
   fontWeight: vars.fontWeight.large,
   fontSize: vars.fontSize.large,
   marginBottom: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.medium,
+      marginBottom: "1.5rem",
+    },
+  },
 });
 
 export const terms_paragraph = style({
   lineHeight: 1.6,
   color: "rgba(0,0,0,0.8)",
   marginBottom: "2rem",
+  wordBreak: "break-word",
 });
 
 export const terms_sub_title = style({
   fontWeight: vars.fontWeight.medium,
   fontSize: vars.fontSize.medium,
   marginBottom: "2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      marginBottom: "1.5rem",
+      fontSize: vars.fontSize.regular,
+    },
+  },
 });

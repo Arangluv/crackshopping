@@ -16,6 +16,7 @@ export const header_container = style({
       position: "relative",
       gridTemplateColumns: "3fr 4fr 3fr",
       height: "15vh",
+      padding: 5,
     },
   },
 });

@@ -19,6 +19,10 @@ globalStyle(resetTag, {
   boxSizing: "border-box",
 });
 
+globalStyle("html, body", {
+  overflowX: "hidden",
+});
+
 globalStyle("body", {
   lineHeight: 1,
   height: "auto",

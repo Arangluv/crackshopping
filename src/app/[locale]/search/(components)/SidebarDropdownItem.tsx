@@ -2,6 +2,7 @@
 
 import * as style from "@style/search/search-sidebar.css";
 import { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function SidebarDropdownItem() {
   const [isClick, setIsClick] = useState(false);
@@ -25,6 +26,7 @@ export default function SidebarDropdownItem() {
   return (
     <div className={style.category_item_wrapper}>
       <h5 className={style.category_title}>Brands</h5>
+      <IoMdArrowDropdown className={style.category_icon} />
       <ul className={style.list_dropdown_wrapper}>
         {isClick
           ? moreThen8lengthArr.map((str, idx) => {

@@ -1,12 +1,14 @@
 import * as style from "@style/home/main.css";
 import Image from "next/image";
 import Link from "next/link";
+import { PiWashingMachineThin } from "react-icons/pi";
 
 export default function Category() {
   return (
     <aside className={style.sidebar_container}>
       <ul className={style.list_wrapper}>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Appliances</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>
@@ -207,6 +209,7 @@ export default function Category() {
           </div>
         </li>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Some Category</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>
@@ -271,6 +274,7 @@ export default function Category() {
           </div>
         </li>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Some Category</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>
@@ -335,6 +339,7 @@ export default function Category() {
           </div>
         </li>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Some Category</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>
@@ -399,6 +404,7 @@ export default function Category() {
           </div>
         </li>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Some Category</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>
@@ -463,6 +469,7 @@ export default function Category() {
           </div>
         </li>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Some Category</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>
@@ -527,6 +534,7 @@ export default function Category() {
           </div>
         </li>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Some Category</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>
@@ -591,6 +599,7 @@ export default function Category() {
           </div>
         </li>
         <li className={style.list_item_wrapper}>
+          <PiWashingMachineThin className={style.list_icon} />
           <span className={style.list_title}>Some Category</span>
           <div className={style.sub_wrapper}>
             <div className={style.sub_list_wrapper}>

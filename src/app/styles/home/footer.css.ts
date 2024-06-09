@@ -8,7 +8,12 @@ export const footer_wrapper = style({
   gridColumn: "1 / 4",
   display: "grid",
   backgroundColor: vars.themeColor.color.primary,
-  gridTemplateRows: "minmax(3rem, auto),5rem",
+  gridTemplateRows: "minmax(3rem, auto) 5rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridTemplateRows: "minmax(2rem, 4rem) auto",
+    },
+  },
 });
 
 export const nav_wrapper = style({
@@ -20,12 +25,18 @@ export const nav_wrapper = style({
 export const copyright_wrapper = style({
   display: "flex",
   justifyContent: "center",
-  alignItems: "flex-end",
+  alignItems: "center",
 });
 export const nav_link = style({
   color: vars.themeColor.color.background,
   fontSize: vars.fontSize.regular,
   margin: "0 2rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      margin: "0.5rem",
+      fontSize: vars.fontSize.small,
+    },
+  },
 });
 
 export const copy_right = style({
@@ -33,4 +44,9 @@ export const copy_right = style({
   opacity: "0.8",
   color: vars.themeColor.color.background,
   marginBottom: "0.5rem",
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.micro,
+    },
+  },
 });

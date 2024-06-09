@@ -8,11 +8,35 @@ export const search_top_container = style({
   gridColumn: "2 / 3",
   display: "grid",
   gridTemplateRows: "1fr 1fr 1fr",
+  "@media": {
+    "screen and (max-width:479px)": {
+      gridColumn: "1 / 3",
+    },
+  },
 });
+
 export const flex_box_align_center = style({
   display: "flex",
   alignItems: "center",
+  boxSizing: "border-box",
+  "@media": {
+    "screen and (max-width:479px)": {
+      padding: "0 0.7rem",
+    },
+  },
 });
+
+export const keywords_wrapper = style([
+  flex_box_align_center,
+  {
+    "@media": {
+      "screen and (max-width:479px)": {
+        borderTop: `1px solid ${vars.themeColor.color.secondary}`,
+        borderBottom: `1px solid ${vars.themeColor.color.secondary}`,
+      },
+    },
+  },
+]);
 
 export const recommended_keywords = style({
   border: `1px solid ${vars.themeColor.color.primary}`,
@@ -29,6 +53,15 @@ export const recommended_keywords = style({
       marginLeft: "1rem",
     },
   },
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.micro,
+      padding: 0,
+      border: "none",
+      lineHeight: 1.3,
+      fontWeight: vars.fontWeight.medium,
+    },
+  },
 });
 
 export const text_accent = style({
@@ -38,6 +71,11 @@ export const text_accent = style({
 
 export const result_quantity_text = style({
   fontSize: vars.fontSize.regular,
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.middleSmall,
+    },
+  },
 });
 
 export const sorted_wrapper = style({
@@ -58,6 +96,11 @@ export const sorted_item = style({
     "&:first-child": {
       paddingRight: "1rem",
       marginLeft: "1rem",
+    },
+  },
+  "@media": {
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
     },
   },
 });
