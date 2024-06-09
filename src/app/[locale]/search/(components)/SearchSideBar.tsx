@@ -1,5 +1,6 @@
 import * as style from "@style/search/search-sidebar.css";
 import SidebarDropdownItem from "./SidebarDropdownItem";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const lessThen8lengthArr = [
   "Wet Ones",
@@ -14,7 +15,9 @@ function SideBarListItem() {
   return (
     <div className={style.category_item_wrapper}>
       <h5 className={style.category_title}>Brands</h5>
-      <ul className={style.list_wrapper}>
+      <IoMdArrowDropdown className={style.category_icon} />
+      {/* <ul className={`${style.list_wrapper} ${style.mobile_only_list_wrapper}`}> 드랍다운 시 클래스를 추가하면 된다 */}
+      <ul className={`${style.list_wrapper}`}>
         {lessThen8lengthArr.map((str, idx) => {
           return (
             <li className={style.list_item} key={`${idx}_list`}>
@@ -30,6 +33,7 @@ function SideBarCheckListItem() {
   return (
     <div className={style.category_item_wrapper}>
       <h5 className={style.category_title}>Brands</h5>
+      <IoMdArrowDropdown className={style.category_icon} />
       <ul className={style.list_wrapper}>
         <li className={style.list_item}>
           <input className={style.list_checkbox} type="checkbox" />

@@ -14,8 +14,7 @@ export const search_main_container = style({
   "@media": {
     "screen and (max-width:479px)": {
       gridTemplateColumns: "none",
-      gridTemplateRows:
-        "minmax(10rem, 12rem) minmax(6rem, 6rem) minmax(80vh, auto)",
+      gridTemplateRows: "minmax(10rem, 12rem) 4rem minmax(80vh, auto)",
     },
   },
 });
@@ -40,7 +39,7 @@ export const product_main_container = style({
     "screen and (max-width:479px)": {
       gridColumn: "none",
       gridRow: "3 / 4",
-      gridAutoRows: "calc(17rem)",
+      gridAutoRows: "18rem",
     },
   },
 });
