@@ -10,8 +10,11 @@ import SearchBar from "./SearchBar";
 interface IProps {
   locale: string;
 }
+
 export default async function Header({ locale }: IProps) {
   const { t } = await initTranslations(locale, "home");
+  console.log("process.env.NODE_ENV"); // development, production
+  console.log(process.env.NODE_ENV);
   return (
     <header className={style.header_container}>
       <div className={style.logo_wrapper}>
@@ -49,6 +52,7 @@ export default async function Header({ locale }: IProps) {
           </div>
         </a>
       </div>
+      <span>{process.env.TEST}</span>
     </header>
   );
 }

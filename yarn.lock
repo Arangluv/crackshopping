@@ -2778,6 +2778,13 @@ eastasianwidth@^0.2.0:
   resolved "https://registry.yarnpkg.com/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
+ebay-oauth-nodejs-client@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/ebay-oauth-nodejs-client/-/ebay-oauth-nodejs-client-1.2.2.tgz#d0f8ff67e3edcd0aa81be01ca73dae17c1624af3"
+  integrity sha512-loTlaN0tgmB4W9jVKUMJC8TjIs4OZ6U/ktjI1ctJQKCZi3qAWkwt26sUtMkWCGaZbJgjZhNMoUi2bEvVGdGc/w==
+  dependencies:
+    querystring "^0.2.0"
+
 electron-to-chromium@^1.4.668:
   version "1.4.754"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.754.tgz#20a9f3cc80e0fb6a804b86605e55da16918a58b0"
@@ -4515,6 +4522,11 @@ punycode@^2.1.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
+
+querystring@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.1.tgz#40d77615bb09d16902a85c3e38aa8b5ed761c2dd"
+  integrity sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
