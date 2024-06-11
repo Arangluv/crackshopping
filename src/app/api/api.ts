@@ -1,6 +1,7 @@
 import axios from "axios";
 import { json } from "stream/consumers";
 const zlib = require("zlib");
+
 const getAccessToken = async () => {
   try {
     const token = await axios({
@@ -49,7 +50,7 @@ export const getDefaultCategoryTreeId = async () => {
     return categoryTreeId;
   } catch (err) {
     console.log("err?");
-    console.log(err);
+    console.log(err)
     return null;
   }
 };
