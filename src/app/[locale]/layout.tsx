@@ -3,6 +3,7 @@ import "@style/global.css";
 import { Karla } from "next/font/google";
 import * as style from "@style/home/main.css";
 import Provider from "../context/ThemeProvider";
+import QueryProvider from "../context/QueryProvider";
 import Header from "./(home)/(components)/header/Header";
 import Footer from "./(home)/(components)/Footer";
 import * as globalStyle from "../styles/global.css";
@@ -39,11 +40,13 @@ export default function RootLayout({
       </head>
       <body className={`${globalStyle.hidden_scroll} ${karla.className}`}>
         <Provider>
-          <div className={style.main_container}>
-            <Header locale={locale} />
-            {children}
-            <Footer />
-          </div>
+          <QueryProvider>
+            <div className={style.main_container}>
+              <Header locale={locale} />
+              {children}
+              <Footer />
+            </div>
+          </QueryProvider>
         </Provider>
       </body>
     </html>
