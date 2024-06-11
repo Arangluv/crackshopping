@@ -6,6 +6,9 @@ import Product from "@/public/assets/icons/product.svg";
 import Category from "@/public/assets/icons/category.svg";
 import initTranslations from "../../../../utills/localization/translation";
 import SearchBar from "./SearchBar";
+import EbayAuthToken from "ebay-oauth-nodejs-client";
+import axios from "axios";
+import { getCategory } from "@src/app/api/api";
 
 interface IProps {
   locale: string;
@@ -15,6 +18,8 @@ export default async function Header({ locale }: IProps) {
   const { t } = await initTranslations(locale, "home");
   console.log("process.env.NODE_ENV"); // development, production
   console.log(process.env.NODE_ENV);
+  const data = await getCategory();
+  console.log(data);
   return (
     <header className={style.header_container}>
       <div className={style.logo_wrapper}>
