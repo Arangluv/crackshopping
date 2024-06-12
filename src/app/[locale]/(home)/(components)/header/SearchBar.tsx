@@ -29,7 +29,25 @@ const getSearchItem = async () => {
   return response.data.searchData;
 };
 
+function ResultItem({
+  text,
+  searchKeyword,
+}: {
+  text: string;
+  searchKeyword: string;
+}) {
+  const [preTitle, nextTitle] = text.split(new RegExp(searchKeyword, "gi"));
+  return (
+    <a href="#" className={style.result_link}>
+      {preTitle}
+      <span className={style.text_accent}>{searchKeyword}</span>
+      {nextTitle}
+    </a>
+  );
+}
+
 export default function SearchBar() {
+  const KEYWORD = "iphone";
   const {
     data: searchData,
     error,
@@ -39,10 +57,15 @@ export default function SearchBar() {
     queryFn: getSearchItem,
   });
   console.log(searchData);
+
+  // data가 없으면 빈 div를 return
+  // 추후 loading 부분을 구현해야함
   if (!searchData) return <div></div>;
+
   return (
     <div className={style.search_bar_container}>
       <div className={style.content_wrapper}>
+        {/* 검색을 하는 form */}
         <form className={style.search_bar_form}>
           <fieldset className={style.search_field}>
             <legend className={style.hidden}>product search</legend>
@@ -59,6 +82,7 @@ export default function SearchBar() {
             </label>
           </fieldset>
         </form>
+        {/* 검색에 대한 결과값을 보여주는 div */}
         <div className={style.search_result_wrapper}>
           {/* <div className={`${style.result_text_wrapper} last-result`}>
             <a href="http://www.example.com" className={style.result_link}>
@@ -67,10 +91,11 @@ export default function SearchBar() {
           </div> */}
           {searchData.itemSummaries.map((info, idx) => {
             return (
-              <div className={`${style.result_text_wrapper} last-result`}>
-                <a href="http://www.example.com" className={style.result_link}>
-                  {info.title}
-                </a>
+              <div
+                key={idx}
+                className={`${style.result_text_wrapper} last-result`}
+              >
+                <ResultItem text={info.title} searchKeyword={KEYWORD} />
               </div>
             );
           })}

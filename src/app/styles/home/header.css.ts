@@ -160,7 +160,7 @@ export const search_result_wrapper = style({
 
 export const result_text_wrapper = style({
   width: "100%",
-  padding: "5px 10px",
+  padding: "10px",
   ":hover": {
     backgroundColor: vars.themeColor.color.secondary,
   },
@@ -172,6 +172,9 @@ export const result_text_wrapper = style({
 });
 export const result_link = style({
   display: "block",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  whiteSpace: "pre",
 });
 export const text_accent = style({
   color: vars.themeColor.color.accent,
