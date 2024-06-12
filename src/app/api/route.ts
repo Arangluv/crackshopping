@@ -1,33 +1,10 @@
 import axios from "axios";
 import { json } from "stream/consumers";
-const zlib = require("zlib");
+import { NextRequest, NextResponse } from "next/server";
+import { getAccessToken } from "./utills";
 
-const getAccessToken = async () => {
-  try {
-    const token = await axios({
-      method: "POST",
-      url: `${process.env.EBAY_URL}/identity/v1/oauth2/token`,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        Authorization:
-          "Basic " +
-          Buffer.from(
-            process.env.EBAY_APP_ID + ":" + process.env.EBAY_SECRET_KEY,
-          ).toString("base64"),
-      },
-      data: {
-        grant_type: "client_credentials",
-        scope: "https://api.ebay.com/oauth/api_scope",
-      },
-    });
-    return token.data.access_token;
-  } catch (err) {
-    console.log(err);
-    return null;
-  }
-};
 // 지역별로 default category tree id를 알 수 있다.
-// 이걸 받아 ge
+// 이걸 받아 getCategory를 호출
 export const getDefaultCategoryTreeId = async () => {
   const accessToken = await getAccessToken();
   try {
@@ -49,8 +26,6 @@ export const getDefaultCategoryTreeId = async () => {
 
     return categoryTreeId;
   } catch (err) {
-    console.log("err?");
-    console.log(err)
     return null;
   }
 };
@@ -70,13 +45,24 @@ export const getCategory = async () => {
         "Accept-Language": "en-us",
       },
       responseType: "arraybuffer",
+    }).then(response => {
+      const buffer = Buffer.from(response.data, "binary");
+      const jsonString = buffer.toString("utf-8");
+      const jsonData = JSON.parse(jsonString);
+      return jsonData;
     });
-    const buffer = Buffer.from(data.data, "binary");
-    const jsonString = buffer.toString("utf-8");
-    const jsonData = JSON.parse(jsonString);
-    console.log(jsonData);
-    //data.data ->  data: { categoryTreeId: '0', categoryTreeVersion: '130' }
+    return data;
   } catch (err) {
-    console.log(err);
+    throw err;
+  }
+};
+
+export const GET = async () => {
+  try {
+    const data = await getCategory();
+    return Response.json({ data });
+  } catch (err) {
+    console.log("err");
+    throw err;
   }
 };
