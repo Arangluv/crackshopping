@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import { style } from "@vanilla-extract/css";
+import { keyframes, style } from "@vanilla-extract/css";
 import { vars } from "../theme.css";
 
 export const header_container = style({
@@ -138,6 +138,42 @@ export const icon = style({
     },
   },
 });
+
+export const search_result_fallback_warpper = style({
+  position: "absolute",
+  boxSizing: "border-box",
+  display: "flex",
+  flexDirection: "column",
+  padding: "8px 10px",
+  width: "80%",
+  minHeight: "100px",
+  marginTop: "20px",
+  transform: "translateY(18px)",
+  border: "1px solid rgba(0,0,0,0.2)",
+  backgroundColor: vars.themeColor.color.background,
+  boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+  zIndex: 999,
+});
+
+const skeleton_animate = keyframes({
+  "100%": {
+    backgroundPosition: "-100% 0",
+  },
+});
+
+export const result_text_fallback = style({
+  padding: "10px 0",
+  marginBottom: 10,
+  height: "1rem",
+  opacity: 0.5,
+  background:
+    "linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%)",
+  borderRadius: "1rem",
+  backgroundSize: "200% 100%",
+  backgroundPosition: "100% 0",
+  animation: `${skeleton_animate} 1s infinite`,
+});
+
 export const search_result_wrapper = style({
   position: "absolute",
   boxSizing: "border-box",
