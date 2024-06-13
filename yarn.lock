@@ -1714,6 +1714,11 @@
   dependencies:
     "@tanstack/query-devtools" "5.37.1"
 
+"@tanstack/react-query-next-experimental@^5.45.0":
+  version "5.45.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query-next-experimental/-/react-query-next-experimental-5.45.0.tgz#0c406b38b5de5ef0bd873c4fc0bbb9bc1bc3c9c3"
+  integrity sha512-75Tl2T54w5m1h0CvZN1Pdz3zM52zj18uNsOHi5Xszj5D4KM07ZhSNyon8N5osVS+YVcoR/gVqZn8pkRv1SpSqA==
+
 "@tanstack/react-query@^5.40.1":
   version "5.40.1"
   resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.40.1.tgz#c1098791fea42bdc4c48938fb0131fa9ccc30fae"
@@ -1761,6 +1766,11 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
+
+"@types/lodash@^4.17.5":
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.5.tgz#e6c29b58e66995d57cd170ce3e2a61926d55ee04"
+  integrity sha512-MBIOHVZqVqgfro1euRDWX7OO0fBVUUMrN6Pwm8LQsz8cWhEpihlvR70ENj3f40j58TNxZaWv2ndSkInykNBBJw==
 
 "@types/node@*":
   version "20.12.8"

@@ -1,6 +1,10 @@
+"use client";
+
 import * as style from "@style/home/header.css";
 import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
 import axios from "axios";
+import debounce from "lodash/debounce";
+import { useCallback, useEffect, useState } from "react";
 
 type ItemSummary = {
   itemId: string;
@@ -47,17 +51,16 @@ const testApi = async () => {
   await new Promise(resolve => setTimeout(resolve, 10000));
   return null;
 };
-export default async function SearchResult() {
-  const KEYWORD = "iphone";
+export default async function SearchResult({ keyword }: { keyword: string }) {
   const {
     data: searchData,
     error,
     status,
   } = useSuspenseQuery<SearchItem>({
     queryKey: ["search-item"],
-    queryFn: testApi,
+    queryFn: getSearchItem,
+    
   });
-  // console.log(searchData);
 
   if (!searchData) return <div></div>;
   return (
@@ -70,7 +73,7 @@ export default async function SearchResult() {
       {searchData.itemSummaries.map((info, idx) => {
         return (
           <div key={idx} className={`${style.result_text_wrapper} last-result`}>
-            <ResultItem text={info.title} searchKeyword={KEYWORD} />
+            <ResultItem text={info.title} searchKeyword={keyword} />
           </div>
         );
       })}

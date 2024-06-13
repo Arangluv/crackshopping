@@ -53,7 +53,7 @@ export default function SearchBar() {
         </form>
         {/* 검색에 대한 결과값을 보여주는 div */}
         <Suspense fallback={<SearchResultFallBack />}>
-          <SearchResult />
+          <SearchResult keyword={watch("keyword")} />
         </Suspense>
       </div>
     </div>

@@ -31,6 +31,9 @@ export default async function initTranslations(
       fallbackNS: namespace,
       ns: namespace,
       preload: resources ? [] : i18nConfig.locales,
+      react: {
+        useSuspense: false, //   <---- this will do the magic
+      },
     };
   });
 
