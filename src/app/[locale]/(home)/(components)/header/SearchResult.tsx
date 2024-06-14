@@ -48,21 +48,19 @@ function ResultItem({
   );
 }
 const testApi = async () => {
-  await new Promise(resolve => setTimeout(resolve, 10000));
+  await new Promise(resolve => setTimeout(resolve, 2000));
   return null;
 };
-export default async function SearchResult({ keyword }: { keyword: string }) {
+
+export default function SearchResult({ keyword }: { keyword: string }) {
   const {
     data: searchData,
     error,
     status,
   } = useSuspenseQuery<SearchItem>({
-    queryKey: ["search-item"],
-    queryFn: getSearchItem,
-    
+    queryKey: ["search-item", keyword],
+    queryFn: testApi,
   });
-
-  if (!searchData) return <div></div>;
   return (
     <div className={style.search_result_wrapper}>
       {/* <div className={`${style.result_text_wrapper} last-result`}>
