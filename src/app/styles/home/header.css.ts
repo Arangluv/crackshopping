@@ -194,6 +194,14 @@ export const search_result_wrapper = style({
   },
 });
 
+export const no_search_result_text = style({
+  color: vars.themeColor.color.text,
+  opacity: 0.7,
+  display: "block",
+  marginTop: ".5rem",
+  marginLeft: ".5rem",
+});
+
 export const result_text_wrapper = style({
   width: "100%",
   padding: "10px",

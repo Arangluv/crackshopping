@@ -5,6 +5,7 @@ import TodayProduct from "./(components)/main/TodayProduct";
 import TopDeal from "./(components)/main/TopDeal";
 import AdsenseBanner from "./(components)/main/AdsenseBanner";
 // import { getCategory } from "@src/app/api/api";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 

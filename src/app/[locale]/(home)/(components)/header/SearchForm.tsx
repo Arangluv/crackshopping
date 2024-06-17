@@ -7,6 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import SearchResult from "./SearchResult";
 import SearchResultFallBack from "./SearchResultFallback";
 import { debounce } from "lodash";
+import Error from "../../error";
 
 export default function SearchForm() {
   const {

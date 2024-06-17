@@ -1,10 +1,8 @@
 "use client";
 
 import * as style from "@style/home/header.css";
-import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
-import axios from "axios";
-import debounce from "lodash/debounce";
-import { useCallback, useEffect, useState } from "react";
+import { useSuspenseQuery } from "@tanstack/react-query";
+import { getRecommandedKeyword } from "@src/app/api/recommanded-keyword/route";
 
 type ItemSummary = {
   itemId: string;
@@ -23,12 +21,11 @@ type SearchItem = {
   itemSummaries: ItemSummary[];
 };
 
-const getSearchItem = async () => {
-  const response = await axios({
-    method: "GET",
-    url: "/api/search",
-  });
-  return response.data.searchData;
+// Suspense 동작확인을 위해 작성
+
+const testApi = async () => {
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  return null;
 };
 
 function ResultItem({
@@ -47,10 +44,6 @@ function ResultItem({
     </a>
   );
 }
-const testApi = async () => {
-  await new Promise(resolve => setTimeout(resolve, 2000));
-  return null;
-};
 
 export default function SearchResult({ keyword }: { keyword: string }) {
   const {
@@ -59,18 +52,30 @@ export default function SearchResult({ keyword }: { keyword: string }) {
     status,
   } = useSuspenseQuery<SearchItem>({
     queryKey: ["search-item", keyword],
-    queryFn: testApi,
+    queryFn: () =>
+      getRecommandedKeyword({
+        keyword,
+        locale: "en",
+      }),
   });
+
+  if (!searchData || !searchData?.itemSummaries?.length)
+    return (
+      <div className={style.search_result_wrapper}>
+        <span className={style.no_search_result_text}>
+          There are no recommended keywords.
+        </span>
+      </div>
+    );
+
   return (
     <div className={style.search_result_wrapper}>
-      {/* <div className={`${style.result_text_wrapper} last-result`}>
-    <a href="http://www.example.com" className={style.result_link}>
-      <span className={style.text_accent}>pot</span>ato
-    </a>
-  </div> */}
       {searchData.itemSummaries.map((info, idx) => {
         return (
-          <div key={idx} className={`${style.result_text_wrapper} last-result`}>
+          <div
+            key={idx}
+            className={`${style.result_text_wrapper} ${idx === searchData.itemSummaries.length - 1 ? "last-result" : ""}`}
+          >
             <ResultItem text={info.title} searchKeyword={keyword} />
           </div>
         );

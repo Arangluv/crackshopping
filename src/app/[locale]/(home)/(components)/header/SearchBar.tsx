@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import SearchResult from "./SearchResult";
 import SearchResultFallBack from "./SearchResultFallback";
 import SearchForm from "./SearchForm";
-
 export default async function SearchBar() {
   // data가 없으면 빈 div를 return
   // 추후 loading 부분을 구현해야함
