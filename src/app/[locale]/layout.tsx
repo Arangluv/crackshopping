@@ -7,22 +7,26 @@ import QueryProvider from "../context/QueryProvider";
 import Header from "./(home)/(components)/header/Header";
 import Footer from "./(home)/(components)/Footer";
 import * as globalStyle from "../styles/global.css";
+import RecoilRootWrapper from "../context/RecoilRootWrapper";
 
 export const metadata: Metadata = {
   title: "Shop Smart | CrackShopping",
   description:
     "Compare the prices of items on large online markets such as Amazon and eBay and purchase them at low prices.",
 };
+
 export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   minimumScale: 1,
   userScalable: false,
 };
+
 const karla = Karla({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
+
 export default function RootLayout({
   children,
   params: { locale },
@@ -40,13 +44,15 @@ export default function RootLayout({
       </head>
       <body className={`${globalStyle.hidden_scroll} ${karla.className}`}>
         <Provider>
-          <QueryProvider>
-            <div className={style.main_container}>
-              <Header locale={locale} />
-              {children}
-              <Footer />
-            </div>
-          </QueryProvider>
+          <RecoilRootWrapper>
+            <QueryProvider>
+              <div className={style.main_container}>
+                <Header locale={locale} />
+                {children}
+                <Footer />
+              </div>
+            </QueryProvider>
+          </RecoilRootWrapper>
         </Provider>
       </body>
     </html>

@@ -27,7 +27,7 @@ export default async function Header({ locale }: IProps) {
           />
         </a>
       </div>
-      <SearchBar />
+      <SearchBar locale={locale} />
       <div className={style.menu_wrapper}>
         <AiOutlineMenu className={style.menu_icon} />
       </div>

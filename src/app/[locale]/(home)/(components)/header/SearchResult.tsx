@@ -3,6 +3,8 @@
 import * as style from "@style/home/header.css";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { getRecommandedKeyword } from "@src/app/api/recommanded-keyword/route";
+import { useRecoilValue } from "recoil";
+import { localeState } from "@src/app/atom/global-atom";
 
 type ItemSummary = {
   itemId: string;
@@ -46,6 +48,8 @@ function ResultItem({
 }
 
 export default function SearchResult({ keyword }: { keyword: string }) {
+  const locale = useRecoilValue(localeState);
+
   const {
     data: searchData,
     error,
@@ -55,7 +59,7 @@ export default function SearchResult({ keyword }: { keyword: string }) {
     queryFn: () =>
       getRecommandedKeyword({
         keyword,
-        locale: "en",
+        locale,
       }),
   });
 

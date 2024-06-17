@@ -7,9 +7,10 @@ import { CiSearch } from "react-icons/ci";
 import SearchResult from "./SearchResult";
 import SearchResultFallBack from "./SearchResultFallback";
 import { debounce } from "lodash";
-import Error from "../../error";
+import { useSetRecoilState } from "recoil";
+import { localeState } from "@src/app/atom/global-atom";
 
-export default function SearchForm() {
+export default function SearchForm({ locale }: { locale: string }) {
   const {
     register,
     handleSubmit,
@@ -24,6 +25,11 @@ export default function SearchForm() {
     }, 400),
     [],
   );
+
+  const setLocaleState = useSetRecoilState(localeState);
+  useEffect(() => {
+    setLocaleState(locale);
+  }, [locale]);
 
   useEffect(() => {
     delayedSearch(watch("keyword"));
