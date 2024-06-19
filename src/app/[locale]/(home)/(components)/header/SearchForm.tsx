@@ -9,6 +9,9 @@ import SearchResultFallBack from "./SearchResultFallback";
 import { debounce } from "lodash";
 import { useSetRecoilState } from "recoil";
 import { localeState } from "@src/app/atom/global-atom";
+import { useQueryErrorResetBoundary } from "@tanstack/react-query";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./Error";
 
 export default function SearchForm({ locale }: { locale: string }) {
   const {
@@ -22,7 +25,7 @@ export default function SearchForm({ locale }: { locale: string }) {
   const delayedSearch = useCallback(
     debounce((keyword: string) => {
       setDebouncedKeyword(keyword);
-    }, 400),
+    }, 800),
     [],
   );
 
@@ -38,6 +41,8 @@ export default function SearchForm({ locale }: { locale: string }) {
   const onSubmit = data => {
     console.log(data);
   };
+  const { reset } = useQueryErrorResetBoundary();
+
   return (
     <>
       <form className={style.search_bar_form} onSubmit={handleSubmit(onSubmit)}>
@@ -58,9 +63,13 @@ export default function SearchForm({ locale }: { locale: string }) {
           </label>
         </fieldset>
       </form>
-      <Suspense fallback={<SearchResultFallBack />}>
-        {debouncedKeyword && <SearchResult keyword={debouncedKeyword} />}
-      </Suspense>
+      {debouncedKeyword && (
+        <ErrorBoundary onReset={reset} fallbackRender={ErrorFallback}>
+          <Suspense fallback={<SearchResultFallBack />}>
+            <SearchResult keyword={debouncedKeyword} />
+          </Suspense>
+        </ErrorBoundary>
+      )}
     </>
   );
 }

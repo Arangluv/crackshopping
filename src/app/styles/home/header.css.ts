@@ -202,6 +202,8 @@ export const no_search_result_text = style({
   marginLeft: ".5rem",
 });
 
+export const error_text = style([no_search_result_text, {}]);
+
 export const result_text_wrapper = style({
   width: "100%",
   padding: "10px",

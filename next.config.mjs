@@ -5,6 +5,11 @@ const withVanillaExtract = createVanillaExtractPlugin();
 
 const nextConfig = {
   reactStrictMode: true,
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
   webpack: config => {
     config.module.rules.push({
       test: /\.svg$/,

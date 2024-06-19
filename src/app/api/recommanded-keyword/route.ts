@@ -21,7 +21,6 @@ export const GET = async (req: NextRequest) => {
   try {
     const keyword = req.nextUrl.searchParams.get("keyword");
     const locale = req.nextUrl.searchParams.get("locale");
-
     const accessToken = await getAccessToken();
     const response = await axios({
       url: `${process.env.EBAY_URL}/buy/browse/v1/item_summary/search?q=${keyword}&limit=10&offset=0`,
@@ -35,6 +34,6 @@ export const GET = async (req: NextRequest) => {
     });
     return NextResponse.json({ searchData: response.data });
   } catch (err) {
-    throw err;
+    throw new Error(err);
   }
 };

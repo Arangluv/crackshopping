@@ -24,7 +24,6 @@ type SearchItem = {
 };
 
 // Suspense 동작확인을 위해 작성
-
 const testApi = async () => {
   await new Promise(resolve => setTimeout(resolve, 2000));
   return null;
@@ -50,11 +49,7 @@ function ResultItem({
 export default function SearchResult({ keyword }: { keyword: string }) {
   const locale = useRecoilValue(localeState);
 
-  const {
-    data: searchData,
-    error,
-    status,
-  } = useSuspenseQuery<SearchItem>({
+  const { data: searchData } = useSuspenseQuery<SearchItem>({
     queryKey: ["search-item", keyword],
     queryFn: () =>
       getRecommandedKeyword({

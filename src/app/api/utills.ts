@@ -1,11 +1,8 @@
-import axios from "axios";
-
-// identity part
 export const getAccessToken = async () => {
   try {
-    const token = await axios({
+    const URL = `${process.env.EBAY_URL}/identity/v1/oauth2/token`;
+    const token = await fetch(URL, {
       method: "POST",
-      url: `${process.env.EBAY_URL}/identity/v1/oauth2/token`,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         Authorization:
@@ -14,14 +11,23 @@ export const getAccessToken = async () => {
             process.env.EBAY_APP_ID + ":" + process.env.EBAY_SECRET_KEY,
           ).toString("base64"),
       },
-      data: {
+      body: new URLSearchParams({
         grant_type: "client_credentials",
         scope: "https://api.ebay.com/oauth/api_scope",
+      }),
+      next: {
+        revalidate: 7100,
       },
+    }).then(res => {
+      if (res.status >= 400 || !res.ok) {
+        throw new Error(res.statusText);
+      }
+
+      return res.json();
     });
-    return token.data.access_token;
+    // token의 만료시간은 7200초
+    return token.access_token;
   } catch (err) {
-    console.log(err);
-    return null;
+    throw err;
   }
 };
