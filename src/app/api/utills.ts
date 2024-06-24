@@ -5,11 +5,9 @@ export const getAccessToken = async () => {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        Authorization:
-          "Basic " +
-          Buffer.from(
-            process.env.EBAY_APP_ID + ":" + process.env.EBAY_SECRET_KEY,
-          ).toString("base64"),
+        Authorization: `Basic ${Buffer.from(
+          `${process.env.EBAY_APP_ID}:${process.env.EBAY_SECRET_KEY}`,
+        ).toString("base64")}`,
       },
       body: new URLSearchParams({
         grant_type: "client_credentials",
@@ -28,6 +26,6 @@ export const getAccessToken = async () => {
     // token의 만료시간은 7200초
     return token.access_token;
   } catch (err) {
-    throw err;
+    throw new Error(err);
   }
 };

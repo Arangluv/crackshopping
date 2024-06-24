@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAccessToken } from "../utills";
 import axios from "axios";
+import { getAccessToken } from "../utills";
 
 export const getRecommandedKeyword = async ({
   keyword,
@@ -29,9 +29,12 @@ export const GET = async (req: NextRequest) => {
         Authorization: `Bearer ${accessToken}`,
         "Accept-Language": locale,
         "X-EBAY-C-ENDUSERCTX": `affiliateCampaignId=${process.env.EBAY_PARTNER_ID}`,
-        "X-EBAY-C-MARKETPLACE-ID": `EBAY_${locale.toLocaleUpperCase()}`,
+        "X-EBAY-C-MARKETPLACE-ID": `EBAY_${
+          locale === "en" ? "US" : locale.toLocaleUpperCase()
+        }`,
       },
     });
+    console.log(response);
     return NextResponse.json({ searchData: response.data });
   } catch (err) {
     throw new Error(err);

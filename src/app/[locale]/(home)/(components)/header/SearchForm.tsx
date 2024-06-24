@@ -4,16 +4,17 @@ import * as style from "@style/home/header.css";
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { CiSearch } from "react-icons/ci";
-import SearchResult from "./SearchResult";
-import SearchResultFallBack from "./SearchResultFallback";
 import { debounce } from "lodash";
 import { useSetRecoilState } from "recoil";
 import { localeState } from "@src/app/atom/global-atom";
 import { useQueryErrorResetBoundary } from "@tanstack/react-query";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./Error";
+import SearchResult from "./SearchResult";
+import SearchResultFallBack from "./SearchResultFallback";
 
 export default function SearchForm({ locale }: { locale: string }) {
+  const setLocaleState = useSetRecoilState(localeState);
   const {
     register,
     handleSubmit,
@@ -29,9 +30,9 @@ export default function SearchForm({ locale }: { locale: string }) {
     [],
   );
 
-  const setLocaleState = useSetRecoilState(localeState);
   useEffect(() => {
     setLocaleState(locale);
+    console.log(errors);
   }, [locale]);
 
   useEffect(() => {

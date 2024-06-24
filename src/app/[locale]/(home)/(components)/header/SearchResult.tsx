@@ -23,12 +23,6 @@ type SearchItem = {
   itemSummaries: ItemSummary[];
 };
 
-// Suspense 동작확인을 위해 작성
-const testApi = async () => {
-  await new Promise(resolve => setTimeout(resolve, 2000));
-  return null;
-};
-
 function ResultItem({
   text,
   searchKeyword,

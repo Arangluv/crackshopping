@@ -1,9 +1,18 @@
+"use client";
+
 import * as style from "@style/home/main.css";
 import Image from "next/image";
 import Link from "next/link";
 import { PiWashingMachineThin } from "react-icons/pi";
+import { getCategory } from "@src/app/api/route";
+import { useQuery } from "@tanstack/react-query";
 
 export default function Category() {
+  const { data } = useQuery({
+    queryKey: ["test"],
+    queryFn: getCategory,
+  });
+  console.log(data);
   return (
     <aside className={style.sidebar_container}>
       <ul className={style.list_wrapper}>
