@@ -38,15 +38,8 @@ export default function Category() {
     queryKey: ["test"],
     queryFn: getCategory,
   });
-  console.log("client에서 data");
   if (!categoryData) return <div />;
-  console.log(
-    "categoryData[0].childCategoryTreeNodes[0].childCategoryTreeNodes",
-  );
-  console.log(categoryData[0].childCategoryTreeNodes[0].childCategoryTreeNodes);
-  const rootTree = categoryData.slice(0, 10);
-  const levelOneTree = [];
-  const levelTwoTree = [];
+
   return (
     <aside className={style.sidebar_container}>
       <ul className={style.list_wrapper}>
@@ -60,38 +53,36 @@ export default function Category() {
                 </span>
                 <div className={style.sub_wrapper}>
                   <div className={style.sub_list_wrapper}>
-                    <ul className={style.list_content_wrapper}>
-                      {rootCategory.childCategoryTreeNodes
-                        .slice(0, 6)
-                        .map((childNode, idx) => {
-                          return (
-                            <>
-                              <li key={idx}>
-                                <Link
-                                  href="#"
-                                  className={style.sub_list_parent_title}
-                                >
-                                  {childNode.category.categoryName}
-                                </Link>
-                              </li>
-                              {childNode.childCategoryTreeNodes
-                                ?.slice(0, 8)
-                                .map((level2Child, idx) => {
-                                  return (
-                                    <li key={idx}>
-                                      <Link
-                                        href="#"
-                                        className={style.sub_list_child_title}
-                                      >
-                                        {level2Child.category.categoryName}
-                                      </Link>
-                                    </li>
-                                  );
-                                })}
-                            </>
-                          );
-                        })}
-                    </ul>
+                    {rootCategory.childCategoryTreeNodes
+                      .slice(0, 6)
+                      .map((childNode, idx) => {
+                        return (
+                          <ul className={style.list_content_wrapper}>
+                            <li key={idx}>
+                              <Link
+                                href="#"
+                                className={style.sub_list_parent_title}
+                              >
+                                {childNode.category.categoryName}
+                              </Link>
+                            </li>
+                            {childNode.childCategoryTreeNodes
+                              ?.slice(0, 8)
+                              .map((level2Child, idx) => {
+                                return (
+                                  <li key={idx}>
+                                    <Link
+                                      href="#"
+                                      className={style.sub_list_child_title}
+                                    >
+                                      {level2Child.category.categoryName}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                          </ul>
+                        );
+                      })}
                   </div>
                   <div className={style.sub_list_image_wrapper}>
                     <a href="http://www.example.com">

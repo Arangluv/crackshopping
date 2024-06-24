@@ -147,7 +147,7 @@ export const sub_wrapper = style({
       gridTemplateColumns: "2fr 1fr",
       gridTemplateRows: "1fr 1fr",
       width: "60rem",
-      minHeight: "150%",
+      minHeight: "100%",
       height: "auto",
       left: "100%",
       gap: 5,
@@ -172,7 +172,7 @@ export const sub_list_wrapper = style({
   display: "grid",
   gap: 5,
   gridTemplateColumns: "1fr 1fr",
-  gridAutoRows: "minmax(100px, auto)",
+  gridAutoRows: "minmax(1rem, auto)",
 });
 export const list_content_wrapper = style({
   display: "flex",
