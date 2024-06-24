@@ -34,7 +34,6 @@ export const GET = async (req: NextRequest) => {
         }`,
       },
     });
-    console.log(response);
     return NextResponse.json({ searchData: response.data });
   } catch (err) {
     throw new Error(err);

@@ -7,11 +7,18 @@ import { getAccessToken } from "./utills";
 
 export const getCategory = async () => {
   try {
-    const data = await axios({
+    const {
+      data: {
+        category: {
+          rootCategoryNode: { childCategoryTreeNodes },
+        },
+      },
+    } = await axios({
       method: "GET",
-      url: "http://localhost:3000/api/",
+      url: "/api/",
     });
-    return data;
+
+    return childCategoryTreeNodes;
   } catch (err) {
     console.log("get category에서 오류?");
     return null;
@@ -64,11 +71,9 @@ export const getAllCategory = async () => {
 };
 
 export const GET = async () => {
-  console.log("실행이 안되나?ddd");
   try {
     const response = await getAllCategory();
-    console.log(response);
-    return NextResponse.json({ searchData: response.data });
+    return NextResponse.json({ category: response.data });
   } catch (err) {
     console.log("err");
     throw err;
