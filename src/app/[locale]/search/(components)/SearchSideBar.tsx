@@ -1,6 +1,6 @@
 import * as style from "@style/search/search-sidebar.css";
-import SidebarDropdownItem from "./SidebarDropdownItem";
 import { IoMdArrowDropdown } from "react-icons/io";
+import SidebarDropdownItem from "./SidebarDropdownItem";
 
 const lessThen8lengthArr = [
   "Wet Ones",

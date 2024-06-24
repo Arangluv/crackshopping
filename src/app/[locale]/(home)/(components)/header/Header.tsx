@@ -10,8 +10,10 @@ import SearchBar from "./SearchBar";
 interface IProps {
   locale: string;
 }
+
 export default async function Header({ locale }: IProps) {
   const { t } = await initTranslations(locale, "home");
+
   return (
     <header className={style.header_container}>
       <div className={style.logo_wrapper}>
@@ -25,7 +27,7 @@ export default async function Header({ locale }: IProps) {
           />
         </a>
       </div>
-      <SearchBar />
+      <SearchBar locale={locale} />
       <div className={style.menu_wrapper}>
         <AiOutlineMenu className={style.menu_icon} />
       </div>
